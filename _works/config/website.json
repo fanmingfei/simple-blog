@@ -1,5 +1,6 @@
 {
     "title": "一个简单的blog",
     "websitePath": "",
-    "domain": "http://fanmingfei.com"
+    "domain": "https://fanmingfei.com",
+    "author": "fanmingfei"
 }

@@ -43,7 +43,7 @@ module.exports = function() {
                 intro.info.content = intro.content;
                 intro.info.url = config.website.domain + path.resolve('/', config.website.websitePath, config.publishDirectory.posts, file.name + '.html');
                 intro.info._date = intro.info.date;
-                intro.info.date = moment(intro.info.date, 'YYYY-MM-DD HH:mm') //.format()
+                intro.info.date = moment(intro.info.date).format('YYYY-MM-DD HH:mm');
                 database.addPost(intro.info);
             }
         }

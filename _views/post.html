@@ -11,7 +11,14 @@
 </head>
 
 <body>
-    <%-post.content%>
+    <include src="./header.html" />
+    <h2>
+        <%-post.title%>
+    </h2>
+    <main>
+        <%-post.content%>
+    </main>
+    <include src="./footer.html" />
 
 </body>
 
