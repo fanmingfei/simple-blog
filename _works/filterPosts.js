@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
+const moment = require('moment');
 // const tpl = require('././libs/template.js');
 const config = require('./config');
 const parsePost = require('./libs/parsePost');
@@ -12,19 +13,21 @@ const database = require('./libs/database');
 function getPostIntro(content) {
     const r = content.match(/---(\n|.)+?---/g);
     var infoYaml, desc;
-    if (r.length > 0) {
+    if (r && r.length > 0) {
         let y = r[0].split(/\n?---\n?/);
         if (y.length > 0) {
             infoYaml = y[1];
         }
         // console.log(r[0].length)
         content = content.substring(r[0].length);
+        var info = yaml.load(infoYaml);
+
+        return {
+            info,
+            content
+        }
     }
-    var info = yaml.load(infoYaml);
-    return {
-        info,
-        content
-    }
+    return null;
 }
 
 module.exports = function() {
@@ -35,11 +38,12 @@ module.exports = function() {
         if (file.ext == '.md') {
             const content = fs.readFileSync(postsPath + '/' + filepath).toString();
             let intro = getPostIntro(content);
-
-            if (typeof intro.info == "object") {
+            if (intro) {
                 intro.info.filepath = postsPath + '/' + filepath;
                 intro.info.content = intro.content;
                 intro.info.url = config.website.domain + path.resolve('/', config.website.websitePath, config.publishDirectory.posts, file.name + '.html');
+                intro.info._date = intro.info.date;
+                intro.info.date = moment(intro.info.date, 'YYYY-MM-DD HH:mm') //.format()
                 database.addPost(intro.info);
             }
         }

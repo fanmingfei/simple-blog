@@ -15,6 +15,9 @@ module.exports = {
         posts.push(obj);
     },
     getAll() {
-        return deepExtend([], posts);
+        // return deepExtend([], posts);
+        return posts.map(p => {
+            return deepExtend({}, p);
+        })
     }
 }
