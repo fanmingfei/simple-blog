@@ -8,7 +8,6 @@ const tpl = require('./libs/template');
 const marked = require('./libs/parsePost');
 
 function minifyHtml(html) {
-    return html;
     return minify(html, {
         removeAttributeQuotes: true,
         collapseWhitespace: true,
