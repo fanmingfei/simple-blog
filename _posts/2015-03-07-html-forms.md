@@ -27,14 +27,14 @@ date: 2016-03-17 00:00:00
 
 这些工具都是由HTML**标签**来控制，多数都是使用`<input>`标签。因为这是一个自闭和元素，它的_类型_都是通过`type`属性定义的。
 
-{% highlight html %}
+```
 <!-- A 文本框 -->
 <input type="text">
 <!-- A 复选框 -->
 <input type="checkbox">
 <!-- A 单选按钮 -->
 <input type="radio">
-{% endhighlight %}
+```
 
 <div class="result">
   <input type="text">
@@ -142,9 +142,9 @@ date: 2016-03-17 00:00:00
 
 文本输入框可以展现一些**占位符**，就是在文本框没有内容的时候自动展示出来的文本。
 
-{% highlight html %}
+```
 <input type="text" placeholder="请输入昵称">
-{% endhighlight %}
+```
 
 <div class="result">
   <input type="text" placeholder="请输入昵称">
@@ -156,10 +156,10 @@ date: 2016-03-17 00:00:00
 
 有时候form元素自身是无法描述自己是用来做什么的，所以会给form元素添加一些**label**。
 
-{% highlight html %}
+```
 <label>Email</label>
 <input type="email">
-{% endhighlight %}
+```
 
 <div class="result">
   <label>Email</label>
@@ -171,10 +171,10 @@ Placeholders 已经暗示了输入框需要输入什么内容，但是用户输�
 
 尽管你你可以使用短的段落去描述form元素，使用`<label>`在于以上更加合法，因为它仅仅在表单里面存在。并且它有`for`属性和 input 上的 `id` 属性是匹配的。
 
-{% highlight html %}
+```
 <label for="first_name">名字</label>
 <input id="first_name" type="text">
-{% endhighlight %}
+```
 
 <div class="result">
   <label for="first_name">名字</label>
@@ -187,9 +187,9 @@ Placeholders 已经暗示了输入框需要输入什么内容，但是用户输�
 
 **复选框** 有两个状态：已选 和 未选中。
 
-{% highlight html %}
+```
 <input type="checkbox"> 记住我
-{% endhighlight %}
+```
 
 <div class="result">
   <input type="checkbox"> 记住我
@@ -197,11 +197,11 @@ Placeholders 已经暗示了输入框需要输入什么内容，但是用户输�
 
 因为它太小，所以很容易点不到。所以可以添加一个`<label>`在它旁边来描述。
 
-{% highlight html %}
+```
 <label>
   <input type="checkbox"> 我同意
 </label>
-{% endhighlight %}
+```
 
 <div class="result">
   <label>
@@ -213,11 +213,11 @@ Placeholders 已经暗示了输入框需要输入什么内容，但是用户输�
 
 默认情况下，复选框是未选中状态。你可以使用`checked`属性来设置选中状态。
 
-{% highlight html %}
+```
 <label>
   <input type="checkbox" checked> 记住登陆状态
 </label>
-{% endhighlight %}
+```
 
 <div class="result">
   <label>
@@ -233,7 +233,7 @@ Placeholders 已经暗示了输入框需要输入什么内容，但是用户输�
 这个表单控件需要提供**一组**单选按钮。这一组选项按钮的`name`属性必须一致。
 
 
-{% highlight html %}
+```
 <label>Marital status</label>
 <label>
   <input type="radio" name="status">
@@ -251,7 +251,7 @@ Placeholders 已经暗示了输入框需要输入什么内容，但是用户输�
   <input type="radio" name="status">
   大四
 </label>
-{% endhighlight %}
+```
 
 <div class="result">
   <label>Marital status</label>
@@ -294,7 +294,7 @@ Placeholders 已经暗示了输入框需要输入什么内容，但是用户输�
 
 它的工作原理像单选按钮，但展示不一样。
 
-{% highlight html %}
+```
 <select>
   <option>January</option>
   <option>February</option>
@@ -309,7 +309,7 @@ Placeholders 已经暗示了输入框需要输入什么内容，但是用户输�
   <option>November</option>
   <option>December</option>
 </select>
-{% endhighlight %}
+```
 
 <div class="result">
   <select>
@@ -333,7 +333,7 @@ Placeholders 已经暗示了输入框需要输入什么内容，但是用户输�
 
 如果你给`<select>`添加`multiple`属性，你可以给它多选的能力。
 
-{% highlight html %}
+```
 <label>你有哪些浏览器?</label>
 <select multiple>
   <option>Google Chrome</option>
@@ -342,7 +342,7 @@ Placeholders 已经暗示了输入框需要输入什么内容，但是用户输�
   <option>Opera</option>
   <option>Safari</option>
 </select>
-{% endhighlight %}
+```
 
 <div class="result">
   <label>你有哪些浏览器?</label>
@@ -362,7 +362,7 @@ Placeholders 已经暗示了输入框需要输入什么内容，但是用户输�
 
 ### 例子：一个完整的注册表单
 
-{% highlight html %}
+```
 <form action="/signup" method="POST">
   <p>
     <label>标题</label>
@@ -427,7 +427,7 @@ Placeholders 已经暗示了输入框需要输入什么内容，但是用户输�
     </button>
   </p>
 </form>
-{% endhighlight %}
+```
 
 <div class="result">
   <form action="/signup" method="POST">
