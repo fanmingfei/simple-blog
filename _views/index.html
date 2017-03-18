@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <include src="./head.html" />
     <title>
         <%= website.title%>
     </title>
@@ -19,7 +17,8 @@
                     <a href="<%=post.url%>">
                         <%-post.title%>
                     </a> |
-                    <%=post.date%><br/>
+                    <%=post.date%>
+                        <br/>
                         <%= post.content.substring(0, 200)%>
                 </li>
                 <%})%>
