@@ -37,6 +37,7 @@ thumbs.db
 .CVS  
 .idea
 .vscode/
+_publish/
 node_modules/  
 jscoverage_lib/  
 bower_components/  

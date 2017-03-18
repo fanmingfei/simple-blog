@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/fanmingfei/simple-blog",
   "dependencies": {
+    "deep-extend": "^0.4.1",
     "ejs": "^2.5.6",
     "glob": "^7.1.1",
+    "js-yaml": "^3.8.2",
     "lokijs": "~1.4.3",
     "marked": "~0.3.6"
   }

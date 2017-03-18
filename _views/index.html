@@ -14,9 +14,13 @@
     <include src="./header.html" />
     <main>
         <ul>
-            <%articles.forEach((article)=>{%>
+            <%posts.forEach((post)=>{%>
                 <li>
-                    <%=article.title%>
+                    <a href="<%=post.url%>">
+                        <%=post.title%>
+                    </a> |
+                    <%=post.date%> |
+                        <%= post.content.substring(0, 200)%>
                 </li>
                 <%})%>
         </ul>

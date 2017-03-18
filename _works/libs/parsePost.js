@@ -9,3 +9,5 @@ marked.setOptions({
     smartLists: true,
     smartypants: false
 });
+
+module.exports = marked;

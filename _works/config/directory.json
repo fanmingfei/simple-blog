@@ -1,4 +1,5 @@
 {
-    "posts": "_post",
-    "templates": "_views"
+    "posts": "_posts",
+    "templates": "_views",
+    "publish": "_publish"
 }

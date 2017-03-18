@@ -1,0 +1,8 @@
+{
+    "index": {
+        "template": "index"
+    },
+    "post": {
+        "template": "post"
+    }
+}

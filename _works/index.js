@@ -1,14 +1,14 @@
 const tpl = require("./libs/template.js");
 const fs = require("fs");
-var aa = fs.readFileSync("../_views/index.html");
+
+const filterPosts = require('./filterPosts.js');
+const checkPath = require('./checkPath');
+const render = require('./render');
 
 
-var bb = tpl.render(aa.toString(), {
-    website: {
-        title: "aasd",
-    },
-    articles: [
-        { title: "uuuuuu" }
-    ]
-});
-console.log(bb)
+
+checkPath();
+
+filterPosts();
+
+render();
