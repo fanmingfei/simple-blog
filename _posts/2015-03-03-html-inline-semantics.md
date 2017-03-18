@@ -13,11 +13,11 @@ date: 2016-03-14 00:00:00
 
 **重要** 的词语, 使用 `<strong>` 标签:
 
-{% highlight html %}
+```
 <p>
   这里很 <strong>重要</strong> 这里并没有.
 </p>
-{% endhighlight %}
+```
 
 <div class="result">
   <p>
@@ -32,11 +32,11 @@ date: 2016-03-14 00:00:00
 
 强调词语本身, 使用 `<em>` 标签:
 
-{% highlight html %}
+```
 <p>
   这里 <em>着重强调</em> 这里并没有.
 </p>
-{% endhighlight %}
+```
 
 <div class="result">
   <p>
@@ -52,20 +52,20 @@ date: 2016-03-14 00:00:00
 
 像 W3C 或者 CD 这种缩写都可以用`<abbr>`标签来包含：
 
-{% highlight html %}
+```
 <p>
   我想买一个 <abbr>CD</abbr>.
 </p>
-{% endhighlight %}
+```
 
 
 你可以使用`title`属性给缩写的元素一个介绍，当鼠标移入元素一段时间后会显示。
 
-{% highlight html %}
+```
 <p>
  我想买一个 <abbr title="Compact Disc">CD</abbr>.
 </p>
-{% endhighlight %}
+```
 
 <div class="result">
   <p>
@@ -78,11 +78,11 @@ date: 2016-03-14 00:00:00
 
 `<blockquote>`元素是**块级引用**，他有一个用于**行内**的版本 `<q>`:
 
-{% highlight html %}
+```
 <p>
   他刚刚说 <q>“Hello World”</q>.
 </p>
-{% endhighlight %}
+```
 
 <div class="result">
   <p>

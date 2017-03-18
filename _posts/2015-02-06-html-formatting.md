@@ -22,7 +22,7 @@ date: 2016-03-12 00:00:00
 
 在HTML代码中，换行和空行（由多个换行形成的空行）都会被浏览器所**忽略**。他们只会被视作**一个**空格。
 
-{% highlight html %}
+```
 <blockquote>
 The original idea of the web was that it should be a collaborative
 
@@ -32,7 +32,7 @@ space
 
 where you can communicate through sharing information.
 </blockquote>
-{% endhighlight %}
+```
 
 <div class="result">
   <blockquote>
@@ -42,9 +42,9 @@ where you can communicate through sharing information.
 
 如果你想在文档中**强制**添加一个换行，你需要使用`<br>` HTML 元素：
 
-{% highlight html %}
+```
 <p>At its best, life is completely<br>unpredictable.</p>
-{% endhighlight %}
+```
 
 <div class="result">
   <p>At its best, life is completely<br>unpredictable.</p>
@@ -56,12 +56,12 @@ where you can communicate through sharing information.
 
 Anyway，像连续的空格或者制表符在网页中都是**不可见**的，他们会被浏览器所忽略：
 
-{% highlight html %}
+```
 <p>
   Let's push      this text
   with tabulations.
 </p>
-{% endhighlight %}
+```
 
 如果你想在文字前面添加空格，你可能要用到CSS，那么想你需要在下一章学习啦。
 
@@ -74,9 +74,9 @@ Anyway，像连续的空格或者制表符在网页中都是**不可见**的，�
 HTML代码是相互嵌套的，你必须在书写代码的时候保持嵌套规则。
 
 
-{% highlight html %}
+```
 <article><p>这段代码是写在<strong>一行</strong>里的。</p></article>
-{% endhighlight %}
+```
 
 <div class="result">
   <article><p>这段代码是写在 <strong>一行</strong> 里的。</p></article>
@@ -84,7 +84,7 @@ HTML代码是相互嵌套的，你必须在书写代码的时候保持嵌套规�
 
 像上面这样，如果把代码写在一行，嵌套元素比较多的话，很难记得开始标签和结束标签的位置，容易影响标签的闭合位置，导致页面错乱。。
 
-{% highlight html %}
+```
 <article>
   <p>
     这段代码写了
@@ -95,7 +95,7 @@ HTML代码是相互嵌套的，你必须在书写代码的时候保持嵌套规�
     里
   </p>
 </article>
-{% endhighlight %}
+```
 
 <div class="result">
   <article>

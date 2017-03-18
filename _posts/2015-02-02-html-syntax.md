@@ -17,9 +17,9 @@ HTML 有一套相对于其它语言更简单的规则，HTML通过**边界**来�
 
 以下是一个简单的代表段落的HTML代码：
 
-{% highlight html %}
+```
 <p>这是一个段落，一般我们将段落写在p标签内。</p>
-{% endhighlight %}
+```
 
 <div class="result"><p>这是一个段落，一般我们将段落写在p标签内。</p></div>
 
@@ -47,9 +47,9 @@ HTML 有一套相对于其它语言更简单的规则，HTML通过**边界**来�
 
 复制下面的内容到你的文本编辑器
 
-{% highlight html %}
+```
 <p>Hello World!</p>
-{% endhighlight %}
+```
 
 将它保存为 `my-first-webpage.html` 并且通过浏览器打开它，你可以看到以下内容：
 
@@ -67,9 +67,9 @@ HTML 有一套相对于其它语言更简单的规则，HTML通过**边界**来�
 
 例子：`href`属性用来给`a`标签定义一个**链接**
 
-{% highlight html %}
+```
 <a href="http://www.mozilla.com/firefox">下载 Firefox</a>
-{% endhighlight %}
+```
 
 <div class="result"><a href="http://www.mozilla.com/firefox">下载 Firefox</a></div>
 
@@ -82,9 +82,9 @@ HTML 有一套相对于其它语言更简单的规则，HTML通过**边界**来�
 有些HTML元素**必选**的属性，比如，插入一张图片，你需要使用`src`（资源）属性给元素提供一个图片的地址。
 
 
-{% highlight html %}
+```
 <img src="#" alt="图片的简介">
-{% endhighlight %}
+```
 
 考虑到`<img>`元素是用来展示图片的，所以给他指定一个路径是有必要的。
 
@@ -98,10 +98,10 @@ HTML 有一套相对于其它语言更简单的规则，HTML通过**边界**来�
 
 一条注释以`<!--`开始，`-->`结束。
 
-{% highlight html %}
+```
 <!-- 这是一条注释，将会被浏览器忽略 -->
 <p>Hello World!</p>
-{% endhighlight %}
+```
 
 
 <div class="result"><p>Hello World!</p></div>
@@ -110,10 +110,10 @@ HTML 有一套相对于其它语言更简单的规则，HTML通过**边界**来�
 
 有些HTML元素只有开始标签：
 
-{% highlight html %}
+```
 <br> <!-- line-break -->
 <img src="http://placehold.it/50x50" alt="Description"> <!-- image -->
 <input type="text"> <!-- text input -->
-{% endhighlight %}
+```
 
 因为自闭合标签没有闭合标签，所以它不能包含其他文档内容，只能通过一些属性来设置额外的信息。

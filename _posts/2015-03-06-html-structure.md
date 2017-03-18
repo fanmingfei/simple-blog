@@ -25,7 +25,7 @@ date: 2016-03-16 00:00:00
 
 `header` 通常是HTML文档中的 **第一个** HTML元素，它的作用是为网站提供一些**介绍**，可能包括Logo、标语、导航链接等。
 
-{% highlight html %}
+```
 <header>
   <p>
     <a>
@@ -41,14 +41,14 @@ date: 2016-03-16 00:00:00
     </li>
   </ul>
 </header>
-{% endhighlight %}
+```
 
 ### Footer
 
 和 `header` 相反， `footer`，通常是**最后一个**元素，这里可能把重要的导航重新展示一次，或者添加一些次要的内容。
 
 
-{% highlight html %}
+```
 <footer>
   <p>MarkSheet.io | Copyright 2015</p>
   <ul>
@@ -71,7 +71,7 @@ date: 2016-03-16 00:00:00
     </li>
   </ul>
 </footer>
-{% endhighlight %}
+```
 
 ### Main
 

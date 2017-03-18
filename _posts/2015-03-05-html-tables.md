@@ -27,7 +27,7 @@ It's like having a **spreadsheet** in Excel.
 
 当我们写码的时候，我们需要从左到右，从上到下来定义表格内容。
 
-{% highlight html %}
+```
 <table>
   <tr>
     <td>John Lennon</td>
@@ -46,7 +46,7 @@ It's like having a **spreadsheet** in Excel.
     <td>Drums</td>
   </tr>
 </table>
-{% endhighlight %}
+```
 
 <div class="result">
   <table>
@@ -87,7 +87,7 @@ It's like having a **spreadsheet** in Excel.
 
 让我们使用head和body升级之前的列表。
 
-{% highlight html %}
+```
 <table>
   <thead>
     <tr>
@@ -114,7 +114,7 @@ It's like having a **spreadsheet** in Excel.
     </tr>
   </tbody>
 </table>
-{% endhighlight %}
+```
 
 <div class="result">
   <table>
@@ -151,7 +151,7 @@ It's like having a **spreadsheet** in Excel.
 
 添加tfoot给表格
 
-{% highlight html %}
+```
 <table>
   <thead>
     <tr>
@@ -184,7 +184,7 @@ It's like having a **spreadsheet** in Excel.
     </tr>
   </tbody>
 </table>
-{% endhighlight %}
+```
 
 <div class="result">
   <table>
@@ -235,7 +235,7 @@ It's like having a **spreadsheet** in Excel.
 
 也就是说，如果你想合并列，你需要使用 `rowspan`，它允许一**列**跨越多_行_。
 
-{% highlight html %}
+```
 <table border="1">
   <tr>
     <th colspan="2">Michael Jackson Singles</th>
@@ -251,7 +251,7 @@ It's like having a **spreadsheet** in Excel.
     <td>Off the Wall</td>
   </tr>
 </table>
-{% endhighlight %}
+```
 
 <div class="result">
   <table border="1">

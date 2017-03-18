@@ -15,11 +15,11 @@ date: 2016-03-11 00:00:00
 
 下面我们使用一个段落来嵌套两个内联元素来演示HTML的嵌套规则。
 
-{% highlight html %}
+```
 <p>
    <strong>鲁迅</strong>先生曾经说过：<q>"时间就像海绵里的水,只要愿挤,总还是有的。"</q>.
 </p>
-{% endhighlight %}
+```
 
 <div class="result"><p>
    <strong>鲁迅</strong>先生曾经说过：<q>"时间就像海绵里的水,只要愿挤,总还是有的。"</q>.
@@ -45,21 +45,21 @@ date: 2016-03-11 00:00:00
 因为一个HTML元素有开始和闭合标签，并且开始和闭合标签内有其他元素，才会成为父元素。一个_子元素_必须在它的父元素闭合**之前**闭合。
 
 
-{% highlight html %}
+```
 <!-- 这是一段不合法的代码! :-( -->
 <p>
   这段HTML代码不合法，因为“strong”的开始标签在这里开始 <strong>但是他在“p”的闭合标签后闭合了.
 </p></strong>
-{% endhighlight %}
+```
 
 因为  `<strong>` 在 `<p>` 标签之后，(`<strong>`元素将是 `<p>`元素的子元素),  `<strong>` 则必须在 `<p>`标签闭合之前闭合。
 
-{% highlight html %}
+```
 <!-- 这是一段合法的代码 :-) -->
 <p>
  这段代码是正确的，“strong” 在这里开始<strong>并且在“p”的闭合标签前闭合</strong>.
 </p>
-{% endhighlight %}
+```
 
 ### 深层嵌套
 
@@ -68,7 +68,7 @@ date: 2016-03-11 00:00:00
 
 下面这个例子可能是博客的一部分：
 
-{% highlight html %}
+```
 <article>
   <h1>Famous football quotes</h1>
   <p>
@@ -81,7 +81,7 @@ date: 2016-03-11 00:00:00
     <strong>George Best</strong> said <q>"I spent a lot of money on booze, birds and fast cars. The rest I just squandered."</q> when asked about his lifestyle.
   </p>
 </article>
-{% endhighlight %}
+```
 
 <div class="result">
   <article>
@@ -121,12 +121,12 @@ date: 2016-03-11 00:00:00
 
 然而，**内联元素**只能包含其他的内联元素[^1]。
 
-{% highlight html %}
+```
 <!-- 这是一段不合法的代码! :-( -->
 <strong>
   <p>不能使用strong元素来包含p元素
 </strong>
-{% endhighlight %}
+```
 
 请记住 祖先元素/后代元素，父元素/子元素和兄弟元素。他们的关系在CSS中将会很有用。
 
