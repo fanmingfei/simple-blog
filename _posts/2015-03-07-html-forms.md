@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "HTML <strong>表单</strong>"
-subtitle: "To make a page <strong>interactive</strong>"
-section: html
+category: html
 date: 2016-03-17 00:00:00
 ---
 

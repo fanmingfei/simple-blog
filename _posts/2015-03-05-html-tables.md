@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "HTML <strong>表格</strong>"
-subtitle: "For <strong>multi-dimensional</strong> data"
-section: html
+category: html
 date: 2016-03-15 00:00:00
 ---
 

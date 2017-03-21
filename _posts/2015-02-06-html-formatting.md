@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "HTML <strong>格式</strong>"
-subtitle: "When <strong>whitespace</strong> doesn't matter"
-section: html
+category: html
 date: 2016-03-12 00:00:00
 ---
 

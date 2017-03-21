@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "HTML <strong>内联</strong> 语义"
-subtitle: "The small parts <em>within</em> a block of text"
-section: html
-date: 2016-03-14 00:00:00
+category: html
+date: 2016-01-14 00:00:00
 ---
 
 

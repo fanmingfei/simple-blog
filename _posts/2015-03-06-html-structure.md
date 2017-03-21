@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "HTML <strong>结构</strong>"
-subtitle: "To <strong>organize</strong> the <strong>main</strong> parts of your webpage"
-section: html
+category: html
 date: 2016-03-16 00:00:00
 ---
 

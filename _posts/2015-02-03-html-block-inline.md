@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "HTML <strong>块级元素</strong> 和 <strong>内联元素</strong>"
-subtitle: "HTML has 2 main <strong>types</strong> of elements"
-section: html
-date: 2016-03-10 00:00:00
+category: html
+date: 2016-02-10 00:00:00
 ---
 
 

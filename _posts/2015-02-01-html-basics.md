@@ -1,9 +1,8 @@
 ---
 layout: chapter
 title: "HTML <strong>基 础</strong>"
-subtitle: "HTML is like <strong>Word</strong> but for the <strong>Web</strong>"
-section: html
-date: 2016-03-08 00:00:00
+category: html
+date: 2016-01-08 00:00:00
 ---
 
 

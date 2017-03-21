@@ -4,5 +4,11 @@
     },
     "post": {
         "template": "post"
+    },
+    "archives": {
+        "template": "archives"
+    },
+    "category": {
+        "template": "category"
     }
 }

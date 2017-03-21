@@ -1,20 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 const moment = require('moment');
-var minify = require('html-minifier').minify;
 const config = require('./config');
 const database = require('./libs/database');
-const tpl = require('./libs/template');
+const tplEngine = require('./libs/template');
 const marked = require('./libs/parsePost');
-
-function minifyHtml(html) {
-    return minify(html, {
-        removeAttributeQuotes: true,
-        collapseWhitespace: true,
-        preserveLineBreaks: true,
-    });
-
-}
+const minifyHtml = require('./libs/minifyHtml');
+const deepExtend = require('deep-extend');
 
 function getTpl(name) {
     var pathname = path.resolve(__dirname, '../', config.directory.templates, name + '.html');
@@ -26,38 +18,82 @@ function renderIndex() {
     posts.sort((pre, next) => {
         return moment(pre._date).isBefore(next._date);
     });
-    var obj = {
-        posts,
-        website: config.website
+    var tplVar = {
+        posts
     };
-
-    var indexTpl = getTpl(config.entry.index.template);
-    var indexHtml = tpl.render(indexTpl + '', obj);
-    indexHtml = minifyHtml(indexHtml);
-    var pathname = path.resolve(__dirname, '../', config.directory.publish, 'index.html');
-    fs.writeFileSync(pathname, indexHtml);
+    var tpl = getTpl(config.entry.index.template);
+    var filepath = path.resolve(__dirname, '../', config.directory.publish, 'index.html');
+    makePage(tplVar, tpl, filepath)
 }
 
 function renderPosts() {
     var posts = database.getAll();
-    var obj = {
+    var tplVar = {
         posts,
         website: config.website,
+        title: posts.title
     }
 
     posts.forEach(post => {
-        obj.post = post;
-        obj.post.content = marked(post.content);
-        var postTpl = getTpl(config.entry.post.template);
-        var postHtml = tpl.render(postTpl + '', obj);
-        postHtml = minifyHtml(postHtml);
+        tplVar.post = post;
+        tplVar.post.content = marked(post.content);
+        var tpl = getTpl(config.entry.post.template);
         var file = path.parse(post.filepath);
-        var pathname = path.resolve(__dirname, '../', config.directory.publish, config.publishDirectory.posts, file.name + '.html');
-        fs.writeFileSync(pathname, postHtml);
+        var filepath = path.resolve(__dirname, '../', config.directory.publish, config.publishDirectory.posts, file.name + '.html');
+        makePage(tplVar, tpl, filepath);
+
     })
+}
+
+
+function renderCategory() {
+    var posts = database.getAll();
+    // post.
+}
+
+function renderArchives() {
+    var posts = database.getAll();
+    var archives = {};
+
+    posts.sort((pre, next) => {
+        return moment(pre._date).isBefore(next._date);
+    });
+
+    posts.forEach(post => {
+        if (!archives[moment(posts._date).format("YYYY-MM")]) {
+            archives[moment(posts._date).format("YYYY-MM")] = [];
+        }
+        archives[moment(posts._date).format("YYYY-MM")].push(post);
+    });
+
+    archives = Object.values(archives);
+
+    var newarc = [];
+    archives.forEach((arc, i) => {
+        newarc.push({
+            date: moment(moment(arc[0]._date).format("YYYY-MM"), "YYYY-MM").valueOf(),
+            posts: arc
+        })
+    })
+
+}
+
+
+function makePage(tplVar, tpl, filepath) {
+    var defaultTmpVar = {
+        website: config.website,
+        title: config.website.title
+    };
+    tplVar = deepExtend(defaultTmpVar, tplVar);
+
+    var html = minifyHtml(tplEngine.render(tpl + '', tplVar));
+
+    fs.writeFileSync(filepath, html);
+
 }
 
 module.exports = function() {
     renderPosts();
     renderIndex();
+    renderArchives();
 }
