@@ -75,9 +75,6 @@ function renderArchives() {
             posts: arcs
         })
     })
-    var a = () => {
-        return 2;
-    }
     var tplVar = {
         title: '归档',
         archives: newArchives
@@ -90,6 +87,52 @@ function renderArchives() {
     makePage(tplVar, tpl, filepath);
 }
 
+function renderCategory() {
+
+    var posts = database.getAll();
+
+
+    posts.sort((pre, next) => {
+        return moment(pre._date).isBefore(next._date);
+    });
+
+    var category = {};
+
+    posts.forEach(post => {
+        if (!category[post.category]) {
+            category[post.category] = [];
+        }
+        category[post.category].push(post);
+    });
+    category = Object.values(category);
+
+    var newCategory = [];
+    category.forEach(cate => {
+        newCategory.push({
+            category: cate[0].category,
+            posts: cate
+        });
+    })
+
+    newCategory.sort((p, n) => {
+        return p.category < n.category;
+    })
+
+    var tplVar = {
+        title: '分类',
+        category: newCategory
+    };
+
+
+
+    var tpl = getTpl(config.entry.category.template);
+
+    var filepath = path.resolve(__dirname, '../', config.directory.publish, 'category.html');
+
+    makePage(tplVar, tpl, filepath);
+
+
+}
 
 function makePage(tplVar, tpl, filepath) {
     var defaultTplVar = {
@@ -109,4 +152,5 @@ module.exports = function() {
     renderPosts();
     renderIndex();
     renderArchives();
+    renderCategory();
 }

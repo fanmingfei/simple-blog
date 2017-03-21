@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <include src="./head.html" />
+</head>
+
+<body>
+    <include src="./header.html" />
+    <main>
+        <ul>
+            <%category.forEach((cate)=>{%>
+                <li>
+                    <h3>
+                        <%=cate.category%>
+                    </h3>
+                    <ul>
+                        <%cate.posts.forEach((post)=>{%>
+                            <li>
+                                <a href="<%=post.url%>">
+                                    <%-post.title%>
+                                </a>
+                            </li>
+                            <%})%>
+                    </ul>
+                </li>
+                <%})%>
+        </ul>
+    </main>
+    <include src="./footer.html" />
+</body>
+
+</html>

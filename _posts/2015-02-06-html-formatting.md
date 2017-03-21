@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HTML <strong>格式</strong>"
-category: html
+category: css
 date: 2016-03-12 00:00:00
 ---
 

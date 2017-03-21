@@ -1,7 +1,26 @@
 <header>
     <h1>
-        <a href="<%=website.domain%>">
+        <a href="<%=website.domain%><%=website.websitePath%>">
             <%= website.title%>
         </a>
     </h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="<%=website.domain%><%=website.websitePath%>">
+                首页
+                </a>
+            </li>
+            <li>
+                <a href="<%=website.websitePath%>archives.html">
+                归档
+                </a>
+            </li>
+            <li>
+                <a href="<%=website.websitePath%>category.html">
+                分类
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
