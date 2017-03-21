@@ -60,31 +60,44 @@ function renderArchives() {
     });
 
     posts.forEach(post => {
-        if (!archives[moment(posts._date).format("YYYY-MM")]) {
-            archives[moment(posts._date).format("YYYY-MM")] = [];
+        if (!archives[moment(post._date).format("YYYY-MM")]) {
+            archives[moment(post._date).format("YYYY-MM")] = [];
         }
-        archives[moment(posts._date).format("YYYY-MM")].push(post);
+        archives[moment(post._date).format("YYYY-MM")].push(post);
     });
 
     archives = Object.values(archives);
 
-    var newarc = [];
-    archives.forEach((arc, i) => {
-        newarc.push({
-            date: moment(moment(arc[0]._date).format("YYYY-MM"), "YYYY-MM").valueOf(),
-            posts: arc
+    var newArchives = [];
+    archives.forEach((arcs, i) => {
+        newArchives.push({
+            date: moment(moment(arcs[0]._date).format("YYYY-MM"), "YYYY-MM").valueOf(),
+            posts: arcs
         })
     })
+    var a = () => {
+        return 2;
+    }
+    var tplVar = {
+        title: '归档',
+        archives: newArchives
+    };
 
+    var tpl = getTpl(config.entry.archives.template);
+
+    var filepath = path.resolve(__dirname, '../', config.directory.publish, 'archives.html');
+
+    makePage(tplVar, tpl, filepath);
 }
 
 
 function makePage(tplVar, tpl, filepath) {
-    var defaultTmpVar = {
+    var defaultTplVar = {
         website: config.website,
-        title: config.website.title
+        title: config.website.title,
+        moment: moment
     };
-    tplVar = deepExtend(defaultTmpVar, tplVar);
+    tplVar = deepExtend(defaultTplVar, tplVar);
 
     var html = minifyHtml(tplEngine.render(tpl + '', tplVar));
 
