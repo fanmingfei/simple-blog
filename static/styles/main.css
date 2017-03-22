@@ -1,0 +1,51 @@
+.aside {
+    background: black;
+    color: #fff;
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.aside .avatar {
+    display: block;
+    margin: 30px auto 50px auto;
+    border-radius: 50%;
+}
+
+.aside .nav li {
+    text-align: center;
+}
+
+.aside .nav li a {
+    color: #fff;
+    display: block;
+    padding: 16px;
+}
+
+.aside .nav li a:hover {
+    color: #ddd;
+}
+
+.aside .other {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.aside .other li {
+    margin: 5px;
+}
+
+.aside .other li a {
+    color: #fff;
+}
+
+.aside .other li a:hover {
+    color: #ddd;
+}
+
+main {
+    margin-left: 250px;
+}
