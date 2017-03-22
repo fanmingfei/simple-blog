@@ -1,8 +1,11 @@
+var version = 'v2';
 this.addEventListener('install', function(event) {
     event.waitUntil(
-        caches.open('v1').then(function(cache) {
+        caches.open(version).then(function(cache) {
             return cache.addAll([
-                '/static/',
+                '/static/images/avatar.jpeg',
+                '/static/styles/reset.css',
+                '/static/styles/webfont.css',
                 '/static/fonts/webfont.eot',
                 '/static/fonts/webfont.svg',
                 '/static/fonts/webfont.ttf',
@@ -18,7 +21,7 @@ this.addEventListener('fetch', function(event) {
         return fetch(event.request);
     }).then(function(r) {
         response = r;
-        caches.open('v1').then(function(cache) {
+        caches.open(version).then(function(cache) {
             cache.put(event.request, response);
         });
         return response.clone();
