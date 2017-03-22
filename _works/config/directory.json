@@ -1,5 +1,6 @@
 {
     "posts": "_posts",
     "templates": "_views",
-    "publish": "_publish"
+    "publish": "_publish",
+    "static": "static"
 }
