@@ -1,0 +1,11 @@
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js', {
+            scope: './static'
+        }).then(function(registration) {
+            console.log('sw ok');
+        }).catch(function(error) {
+            console.log('sw error:', error);
+        });
+    }
+</script>
