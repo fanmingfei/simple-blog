@@ -18,7 +18,6 @@ function renderIndex() {
     posts.sort((pre, next) => {
         return next.timeStr - pre.timeStr
     });
-    posts.forEach(x => console.log(x.timeStr));
     var tplVar = {
         posts
     };
