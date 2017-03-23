@@ -2,7 +2,7 @@
 layout: post
 title: "HTML <strong>格式</strong>"
 category: css
-date: 2016-03-12 00:00:00
+date: 2017-03-12 00:00:00
 ---
 
 人类**书写**出来的HTML代码和浏览器**展现**出来的样子是完全不同的。

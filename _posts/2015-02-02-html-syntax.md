@@ -2,7 +2,7 @@
 layout: post
 title: "HTML <strong>语法</strong>"
 category: html
-date: 2016-01-09 00:00:00
+date: 2017-03-09 00:00:00
 ---
 
 **HTML**  **H**yper**T**ext **M**arkup **L**anguage:（超文本标记语言）

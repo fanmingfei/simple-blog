@@ -2,7 +2,7 @@
 layout: post
 title: "HTML <strong>表格</strong>"
 category: html
-date: 2016-03-15 00:00:00
+date: 2017-03-15 00:00:00
 ---
 
 HTML **表格** 是意义是展示表格数据，仅用来展示可以通过**行**和**列**来展示的内容。

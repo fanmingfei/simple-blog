@@ -2,7 +2,7 @@
 layout: post
 title: "HTML <strong>表单</strong>"
 category: html
-date: 2016-03-17 00:00:00
+date: 2017-03-17 00:00:00
 ---
 
 在单纯的导航网站，用户的交互仅仅是通过**链接**来浏览各个页面。
