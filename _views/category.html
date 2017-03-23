@@ -8,24 +8,29 @@
 <body>
     <include src="./nav.html" />
     <main>
-        <ul>
-            <%category.forEach((cate)=>{%>
-                <li>
-                    <h3>
-                        <%=cate.category%>
-                    </h3>
-                    <ul>
-                        <%cate.posts.forEach((post)=>{%>
-                            <li>
-                                <a href="<%=post.url%>">
-                                    <%-post.title%>
-                                </a>
-                            </li>
-                            <%})%>
-                    </ul>
-                </li>
-                <%})%>
-        </ul>
+        <article>
+            <h2 class="title">归档</h2>
+            <div class="content">
+                <ul>
+                    <%category.forEach((cate)=>{%>
+                        <li>
+                            <h3>
+                                <%=cate.category%>
+                            </h3>
+                            <ul>
+                                <%cate.posts.forEach((post)=>{%>
+                                    <li>
+                                        <a href="<%=post.url%>">
+                                            <%-post.title%>
+                                        </a>
+                                    </li>
+                                    <%})%>
+                            </ul>
+                        </li>
+                        <%})%>
+                </ul>
+            </div>
+        </article>
     </main>
     <include src="./footer.html" />
     <include src="./foot.html" />

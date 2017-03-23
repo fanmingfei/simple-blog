@@ -2,6 +2,7 @@ body {
     -webkit-tap-highlight-color: transparent;
     font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
     -webkit-font-smoothing: antialiased;
+    color: #666;
 }
 
 a,
@@ -69,9 +70,12 @@ main {
 main article {
     padding: 40px 0;
     border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    line-height: 1.8;
+    word-wrap: break-word;
 }
 
-main article h2.title {
+main h2.title {
     font-size: 2em;
     font-weight: 300;
     line-height: 35px
@@ -94,12 +98,18 @@ main article .meta {
 
 main article .content {
     margin-top: 15px;
-    font-size: 16px;
-    line-height: 1.8;
-    word-wrap: break-word;
 }
 
 main article .read-more {
     display: block;
     margin-top: 20px;
+}
+
+main article ul {
+    margin-left: 25px;
+}
+
+footer {
+    margin: 40px 40px 40px 280px;
+    text-align: center;
 }

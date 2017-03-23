@@ -16,7 +16,7 @@ function getTpl(name) {
 function renderIndex() {
     var posts = database.getAll();
     posts.sort((pre, next) => {
-        return moment(pre._date).isBefore(next._date);
+        return pre.timeStr < next.timeStr
     });
     var tplVar = {
         posts
@@ -55,14 +55,14 @@ function renderArchives() {
     var archives = {};
 
     posts.sort((pre, next) => {
-        return moment(pre._date).isBefore(next._date);
+        return pre.timeStr < next.timeStr
     });
 
     posts.forEach(post => {
-        if (!archives[moment(post._date).format("YYYY-MM")]) {
-            archives[moment(post._date).format("YYYY-MM")] = [];
+        if (!archives[moment(post.timeStr).format("YYYY-MM")]) {
+            archives[moment(post.timeStr).format("YYYY-MM")] = [];
         }
-        archives[moment(post._date).format("YYYY-MM")].push(post);
+        archives[moment(post.timeStr).format("YYYY-MM")].push(post);
     });
 
     archives = Object.values(archives);
@@ -70,7 +70,7 @@ function renderArchives() {
     var newArchives = [];
     archives.forEach((arcs, i) => {
         newArchives.push({
-            date: moment(moment(arcs[0]._date).format("YYYY-MM"), "YYYY-MM").valueOf(),
+            date: moment(moment(arcs[0].timeStr).format("YYYY-MM"), "YYYY-MM").valueOf(),
             posts: arcs
         })
     })
@@ -92,7 +92,7 @@ function renderCategory() {
 
 
     posts.sort((pre, next) => {
-        return moment(pre._date).isBefore(next._date);
+        return pre.timeStr < next.timeStr
     });
 
     var category = {};

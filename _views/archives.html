@@ -8,24 +8,29 @@
 <body>
     <include src="./nav.html" />
     <main>
-        <ul>
-            <%archives.forEach((arcs)=>{%>
-                <li>
-                    <h3>
-                        <%-moment(arcs.date).format('YYYY 年 MM 月')%>
-                    </h3>
-                    <ul>
-                        <%arcs.posts.forEach((post)=>{%>
-                            <li>
-                                <a href="<%=post.url%>">
-                                    <%-post.title%>
-                                </a>
-                            </li>
-                            <%})%>
-                    </ul>
-                </li>
-                <%})%>
-        </ul>
+        <article>
+            <h2 class="title">归档</h2>
+            <div class="content">
+                <ul>
+                    <%archives.forEach((arcs)=>{%>
+                        <li>
+                            <h3>
+                                <%-moment(arcs.date).format('YYYY 年 MM 月')%>
+                            </h3>
+                            <ul>
+                                <%arcs.posts.forEach((post)=>{%>
+                                    <li>
+                                        <a href="<%=post.url%>">
+                                            <%-post.title%>
+                                        </a>
+                                    </li>
+                                    <%})%>
+                            </ul>
+                        </li>
+                        <%})%>
+                </ul>
+            </div>
+        </article>
     </main>
     <include src="./footer.html" />
     <include src="./foot.html" />
