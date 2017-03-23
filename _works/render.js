@@ -16,8 +16,9 @@ function getTpl(name) {
 function renderIndex() {
     var posts = database.getAll();
     posts.sort((pre, next) => {
-        return pre.timeStr < next.timeStr
+        return next.timeStr - pre.timeStr
     });
+    posts.forEach(x => console.log(x.timeStr));
     var tplVar = {
         posts
     };
@@ -55,7 +56,7 @@ function renderArchives() {
     var archives = {};
 
     posts.sort((pre, next) => {
-        return pre.timeStr < next.timeStr
+        return next.timeStr - pre.timeStr
     });
 
     posts.forEach(post => {
@@ -92,7 +93,7 @@ function renderCategory() {
 
 
     posts.sort((pre, next) => {
-        return pre.timeStr < next.timeStr
+        return next.timeStr - pre.timeStr
     });
 
     var category = {};
@@ -114,7 +115,7 @@ function renderCategory() {
     })
 
     newCategory.sort((p, n) => {
-        return p.category < n.category;
+        return p.category > n.category ? 1 : -1;
     })
 
     var tplVar = {
