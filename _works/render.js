@@ -36,7 +36,6 @@ function renderPosts() {
 
     posts.forEach(post => {
         tplVar.post = post;
-        tplVar.post.content = marked(post.content);
         var tpl = getTpl(config.entry.post.template);
         var file = path.parse(post.filepath);
         var filepath = path.resolve(__dirname, '../', config.directory.publish, config.publishDirectory.posts, file.name + '.html');
@@ -138,7 +137,8 @@ function makePage(tplVar, tpl, filepath) {
     var defaultTplVar = {
         website: config.website,
         title: config.website.title,
-        moment: moment
+        moment: moment,
+        marked: marked
     };
     tplVar = deepExtend(defaultTplVar, tplVar);
 

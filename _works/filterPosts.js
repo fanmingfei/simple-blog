@@ -4,7 +4,6 @@ const yaml = require('js-yaml');
 const moment = require('moment');
 // const tpl = require('././libs/template.js');
 const config = require('./config');
-const parsePost = require('./libs/parsePost');
 
 const database = require('./libs/database');
 
@@ -42,8 +41,7 @@ module.exports = function() {
                 intro.info.filepath = postsPath + '/' + filepath;
                 intro.info.content = intro.content;
                 intro.info.url = config.website.domain + path.resolve('/', config.website.websitePath, config.publishDirectory.posts, file.name + '.html');
-                intro.info._date = intro.info.date;
-                intro.info.date = moment(intro.info.date).format('YYYY-MM-DD HH:mm');
+                intro.info.timeStr = moment(intro.info.date).valueOf();
                 database.addPost(intro.info);
             }
         }
