@@ -2,5 +2,7 @@
     "title": "范明非的Blog",
     "websitePath": "/",
     "domain": "https://fanmingfei.com",
-    "author": "fanmingfei"
+    "author": "fanmingfei",
+    "description": "未来前端",
+    "rss": "rss.xml"
 }
