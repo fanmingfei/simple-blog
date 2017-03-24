@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "一个 <strong>合法的</strong> HTML 文档"
-subtitle: "Some boilerplate"
-section: html
+date: 2017-03-25 01:39:20
+category: html
 ---
 
 直到这里，我们看到的都是一些代码片段，**HTML 文档** 需要包含一套具体的结构才会**合法**。
