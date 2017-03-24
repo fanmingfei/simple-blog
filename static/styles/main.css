@@ -21,9 +21,25 @@ a:hover {
     height: 100%;
 }
 
+.aside .site-title {
+    font-size: 28px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+.aside .subtitle {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ccc;
+}
+
 .aside .avatar {
     display: block;
-    margin: 30px auto 50px auto;
+    margin: 30px auto 20px auto;
     border-radius: 50%;
 }
 
@@ -114,10 +130,17 @@ footer {
     text-align: center;
 }
 
+ 
 @media only screen and (max-width: 600px) {
     nav.aside {
         width: 100%;
         height: 80px;
+    }
+    .aside .site-title {
+        display: none;
+    }
+    .aside .subtitle {
+        display: none;
     }
     nav.aside .avatar {
         display: block;
@@ -147,3 +170,4 @@ footer {
         padding: 20px;
     }
 }
+
