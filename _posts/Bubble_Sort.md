@@ -1,5 +1,5 @@
 ---
-layout: chapter
+layout: post
 title: "用Javascript学算法 之 冒泡排序"
 category: 算法
 date: 2015-07-31 00:00:00
