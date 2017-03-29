@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JavaScript void 关键字"
+title: "JavaScript 中的 void 关键字"
 date: 2017-03-29 10:26:44
 category: JavaScript
 ---
