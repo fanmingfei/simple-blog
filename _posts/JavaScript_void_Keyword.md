@@ -29,7 +29,7 @@ void function foo()
 
 我承认，我认为这没啥用，虽然少写了一点代码。
 
-再看一次 [consistent return](http://eslint.org/docs/rules/consistent-return) ESLint 规则。他的表明函数_总是_返回一个值或者不返回内容（也就是在 JavaScript 函数中，返回 undefined）。
+再看一次 [consistent return](http://eslint.org/docs/rules/consistent-return) ESLint 规则。他表明函数_总是_返回一个值或者不返回内容（也就是在 JavaScript 函数中，返回 undefined）。
 
 比如，你在使用 **Express** 的一个中间件，并且你想使用 `next()` 调用下一个中间件，而且不想在后面执行其他的代码，所以你可能会写 `return next()`。
 
