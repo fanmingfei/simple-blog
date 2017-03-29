@@ -7,7 +7,7 @@ category: JavaScript
 
 
 <blockquote>
-     转自众成翻译：<a href="http://www.zcfy.cc/article/2620">http://www.zcfy.cc/article/2620</a>
+     译文首发于众成翻译：<a href="http://www.zcfy.cc/article/2620">http://www.zcfy.cc/article/2620</a><br>
      原文链接：<a href="http://cmichel.io/javascript-void-keyword/">http://cmichel.io/javascript-void-keyword/</a>
 </blockquote>
 
