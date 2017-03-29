@@ -125,6 +125,11 @@ main article ul {
     margin-left: 25px;
 }
 
+main article p {
+    margin-top: 20px;
+    margin-bottom: 1rem;
+}
+
 footer {
     margin: 40px 40px 40px 280px;
     text-align: center;
