@@ -130,7 +130,37 @@ footer {
     text-align: center;
 }
 
- 
+main article pre {
+    background: #f5f2f0;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    max-width: 800px;
+    overflow-x: scroll;
+    padding: 10px;
+    white-space: pre;
+    overflow: auto;
+    color: #373a3c;
+    display: block;
+    font-size: 90%;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
 @media only screen and (max-width: 600px) {
     nav.aside {
         width: 100%;
@@ -170,4 +200,3 @@ footer {
         padding: 20px;
     }
 }
-
