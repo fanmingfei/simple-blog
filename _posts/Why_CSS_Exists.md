@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CSS 为什么存在？"
-category: css
+category: CSS
 date: 2017-03-30 22:54:00
 ---
 
