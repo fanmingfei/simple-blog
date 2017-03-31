@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HTML <strong>语法</strong>"
-category: html
+category: HTML
 date: 2017-03-09 00:00:00
 ---
 

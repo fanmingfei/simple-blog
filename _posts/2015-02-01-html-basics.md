@@ -1,7 +1,7 @@
 ---
 layout: chapter
 title: "HTML <strong>基 础</strong>"
-category: html
+category: HTML
 date: 2017-03-08 00:00:00
 ---
 

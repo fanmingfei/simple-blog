@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HTML <strong>内联</strong> 语义"
-category: html
+category: HTML
 date: 2017-03-14 00:00:00
 ---
 
