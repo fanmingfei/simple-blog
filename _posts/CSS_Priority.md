@@ -2,7 +2,7 @@
 layout: post
 title: "CSS <strong>优先级</strong>"
 category: CSS
-date: 2017-04-04 10:41:16
+date: 2017-04-04 22:41:16
 ---
 
 一个HTML元素可以被 **多个CSS** 命中，让我们用一个简单的段落举例：

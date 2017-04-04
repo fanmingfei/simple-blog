@@ -15,7 +15,7 @@
                     <%archives.forEach((arcs)=>{%>
                         <li>
                             <h3>
-                                <%-moment(arcs.date).format('YYYY 年 MM 月')%>
+                                <%-moment.utc(arcs.date).format('YYYY 年 MM 月')%>
                             </h3>
                             <ul>
                                 <%arcs.posts.forEach((post)=>{%>

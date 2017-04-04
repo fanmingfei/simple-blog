@@ -3,7 +3,7 @@ layout: post
 title: "CSS <strong>继承</strong>"
 subtitle: "Using the HTML <strong>hierarchy</strong>"
 category: CSS
-date: 2017-03-31 13:23:54
+date: 2017-03-31 23:23:54
 ---
 
 假如我们想修改网页的**文字颜色**，为_每一个_ HTML 元素指定颜色是相当没意思的。
