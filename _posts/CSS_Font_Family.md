@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "CSS <strong>字体</strong>"
-subtitle: "Choosing a <strong>font</strong>"
-section: css
+subtitle: "Removing <strong>default</strong> browser styling"
+category: CSS
+date: 2017-04-07 22:40:03
 ---
 
 CSS 提供了几个影响文本渲染的 **font** 属性。`font-family`属性定义文本的字体。

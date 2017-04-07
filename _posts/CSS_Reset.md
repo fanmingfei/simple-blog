@@ -3,7 +3,7 @@ layout: post
 title: "CSS <strong>Reset</strong>"
 subtitle: "Removing <strong>default</strong> browser styling"
 category: CSS
-date: 2017-04-07 22:00
+date: 2017-04-07 22:00:00
 ---
 
 没有_无样式_的 HTML 元素。每一个网页都会有“保底”的CSS样式： **User agent Stylesheet(用户代理样式表)**
