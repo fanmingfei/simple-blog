@@ -1,0 +1,34 @@
+---
+layout: post
+title: "CSS <strong>Reset</strong>"
+subtitle: "Removing <strong>default</strong> browser styling"
+category: CSS
+date: 2017-04-07 22:00
+---
+
+没有_无样式_的 HTML 元素。每一个网页都会有“保底”的CSS样式： **User agent Stylesheet(用户代理样式表)**
+
+### 用户代理样式表
+
+浏览器自带的CSS文件：
+
+* **每次** 只要网页被渲染就会被加载
+* **前置** 在我们自己写的 CSS 之前被加载
+
+
+每一个浏览器都有自己默认的 CSS 样式，但它们都大同小异。
+
+### 引用一个 CSS reset
+
+浏览器的_默认_样式可能会**干扰**我们实际想要的样式。这就是 **CSS reset** 存在的原因。
+
+它对于规范文字大小、去除所有的边距特别有用。
+
+你可以通过[HTML 5 reset.css](/css/reset.css)找到它。在所有 CSS 引用的前面引用它。
+
+```html
+<head>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+```
