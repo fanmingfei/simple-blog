@@ -31,23 +31,17 @@ function renderPosts() {
     var tplVar = {
         posts,
         website: config.website,
-        title: posts.title
     }
 
     posts.forEach(post => {
         tplVar.post = post;
+        tplVar.title = post.title;
         var tpl = getTpl(config.entry.post.template);
         var file = path.parse(post.filepath);
         var filepath = path.resolve(__dirname, '../', config.directory.publish, config.publishDirectory.posts, file.name + '.html');
         makePage(tplVar, tpl, filepath);
 
     })
-}
-
-
-function renderCategory() {
-    var posts = database.getAll();
-    // post.
 }
 
 function renderArchives() {
