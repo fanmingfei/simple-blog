@@ -71,7 +71,7 @@ SKU 是唯一标示，听说只要别和应用商店的其他App一样就行了�
 
 这个操作需要在Xcode里面。
 
-![](http://i1.piimg.com/4851/1fd3287c6ee0e8cb.jpg)
+![](http://i2.muimg.com/4851/171308ea4df685bb.jpg)
 
 点击这里创建一个Archive。
 
