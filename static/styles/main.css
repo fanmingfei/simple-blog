@@ -130,6 +130,10 @@ main article p {
     margin-bottom: 1rem;
 }
 
+main article img {
+    max-width: 100%;
+}
+
 footer {
     margin: 40px 40px 40px 280px;
     text-align: center;
