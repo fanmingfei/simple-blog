@@ -26,12 +26,12 @@ dva 的数据流向
 
 ![](http://p5.qhimg.com/t01304dfb1caf86d47e.jpg)
 
-`components` 对应的是 dva 里面的 Component 。
-`view-model` 对应的是 dva 里面的 Model ，因为与 react 和 redux 试图渲染强相关，所以定为view-model。
-`routers` 对应的是 dva 里面的 Router 。
-`services` 里面写一写基础服务，比如 API 请求、错误处理、事件系统、弹窗提醒等服务。
-`data-model` 是业务数据模型，如果没有可省略，如果和服务关系很强，可以写到services里面。
-`mocks` Mock 数据
+- `components` 对应的是 dva 里面的 Component 。
+- `view-model` 对应的是 dva 里面的 Model ，因为与 react 和 redux 试图渲染强相关，所以定为view-model。
+- `routers` 对应的是 dva 里面的 Router 。
+- `services` 里面写一写基础服务，比如 API 请求、错误处理、事件系统、弹窗提醒等服务。
+- `data-model` 是业务数据模型，如果没有可省略，如果和服务关系很强，可以写到services里面。
+- `mocks` Mock 数据
 
 拿我大学在的社团鲁大学生网的最新版 Android App 举例
 
