@@ -134,6 +134,15 @@ main article img {
     max-width: 100%;
 }
 
+main article h2 {
+    font-size: 1.7em;
+    border-bottom: 1px solid #ddd;
+}
+
+main article h3 {
+    font-size: 1.3em;
+}
+
 footer {
     margin: 40px 40px 40px 280px;
     text-align: center;
