@@ -1,0 +1,166 @@
+---
+layout: post
+title: 使用 Ant Design + dva 构建小型前端项目 (一)
+category: Other
+date: 2017-04-24 17:33:00
+---
+## 前言
+去年11月的时候接手了一个小型的后台系统，负责前端开发，团队经过研究选择了从来没有用过的 [Ant Design](https://ant.design/index-cn)，作为一门设计语言([什么是设计语言](https://www.zhihu.com/question/24283181/answer/102586216))，如果我们此次项目使用 Ant Design 获得收益，我们以后所有的新的 To B 业务 ([To B 业务具体指什么](https://www.zhihu.com/question/37841619))将继续使用这门设计语言。
+
+虽然说 Ant Design 是一门设计语言，但官方给我们提供了一套基于 Ant Design 开发出来的完整的 React UI 组件库，并且提供了一套完整的解决方案。
+
+官方提供了一套 npm + webpack 的解决方案来辅助开发，主要工具也是阿里大神开发的 [dva](https://github.com/dvajs/dva)，dva 是一个基于 react 和 redux 的轻量应用框架，具体可参考[项目实战](https://ant.design/docs/react/practical-projects-cn)。
+
+## dva 简介
+
+基于 [redux](https://github.com/reactjs/redux)、[redux-saga](https://github.com/yelouafi/redux-saga) 和 [react-router@2.x](https://github.com/ReactTraining/react-router/tree/v2.8.1) 的轻量级前端框架。
+
+可以查看 [快速开始](https://github.com/dvajs/dva/blob/master/docs/GettingStarted.md)
+
+dva 的数据流向
+![](https://camo.githubusercontent.com/c826ff066ed438e2689154e81ff5961ab0b9befe/68747470733a2f2f7a6f732e616c697061796f626a656374732e636f6d2f726d73706f7274616c2f505072657245414b62496f445a59722e706e67)
+
+具体参考：[dva 概念](https://github.com/dvajs/dva/blob/master/docs/Concepts_zh-CN.md)
+
+## 开发环境
+
+因为团队内部有 Linux 开发机和 Mac 本地开发两种开发环境，开发机只能访问80端口，虽然我不能统一开发环境，但是统一开发方式还是可以的。
+
+我做的第一个工作为 Linux 开发机是写了一个脚本将开发所使用的域名的 80 端口的代理到 node 启动服务的端口上。
+
+![](http://p9.qhimg.com/t01c94e152e4b39ca87.jpg)
+
+目录结构和文件大致是这样的，内容就暂时别看了，涉及代码。主要原理就是添加一个 nginx 文件，对开发人员配置的域名做了一个反向代理。
+
+使用方法:
+
+在 Nginx 服务器需要运行：
+
+```
+npm run init_server -- --port 19211 --proxy-port 19212
+```
+
+这里要传两个端口，第一个 `--port` 是web服务的端口号，第二个 `--proxy-port` 是代理端口号，这两个是 dva 框架需要配置的内容，在dva中，proxy port 用来提供 Mock 等功能。其实在 nginx 中用到的只是 `--proxy-port`，访问 proxy port 可以访问到web服务和Mock文件。
+
+
+## 代码目录结构
+
+![](http://p5.qhimg.com/t01304dfb1caf86d47e.jpg)
+
+`components` 对应的是 dva 里面的 Component 。
+`view-model` 对应的是 dva 里面的 Model ，因为与 react 和 redux 试图渲染强相关，所以定为view-model。
+`routers` 对应的是 dva 里面的 Router 。
+`services` 里面写一写基础服务，比如 API 请求、错误处理、事件系统、弹窗提醒等服务。
+`data-model` 是业务数据模型，如果没有可省略，如果和服务关系很强，可以写到services里面。
+`mocks` Mock 数据
+
+拿我大学在的鲁大学生网的最新版 Android App 举例
+
+![](http://p6.qhimg.com/t011ddf5c3a872ac23e.jpg)
+
+首先分析一下功能：
+
+暂时先看我截图的几个内容
+
+- 首页
+- 成绩查询
+- 小e快报
+- 二手市场
+- 失物招领
+- 心愿墙
+- 求助
+
+抛去首页和成绩查询外，其它功能都有列表页和详情页。其实都是可以抽象化成文章的发布和展示（这里我并没有截图发布相关的页面）。
+
+
+## Model
+
+如果使用面向对象模式，我可能会创建一个文章的模型，不同的功能都来继承这个模型，添加不同的属性和方法。
+
+但现在看来只是一些简简单单的数据展示，每条数据没有太多需要用户操作的地方，我们可以使用 dva 提供给我们的 Model 来实现数据的展示和更新。
+
+看起来我们不仅仅是需要这些内容，有些文章是可以评论的，我们是否需要一个评论的 Model 呢？
+
+那我们可以看一下具体需要哪些 Model 了
+
+![](http://p0.qhimg.com/t013da4d0860a0bf518.jpg)
+
+## Router
+
+Model 搞定了，我们开始创建 Router。
+
+如果我们每个功能的页面都要创建一个 Router 的话，我们可能会创建很多。我们可以通过需要展示的文章类型来创建 Router。
+
+所以我把所有类似文章类型的列表使用 Router 内容使用一个 Router，然后在 Router 里面来根据类型引用不同的 Component。
+
+另外还需要一个首页。
+
+![](http://p3.qhimg.com/t0175a8b476c474f36e.jpg)
+
+## Component
+
+Router 的内容不是很多，只有 3 个文件，感觉很薄，主要还是要在Component这里了。
+
+Component 这边主要是根据业务来提供一些展示数据用的组件。
+
+回想一下刚刚网站上的一些功能，总结我们需要的模块：
+
+### 首页
+
+首页只是一个九宫格，只是一些简单的页面，不需要什么逻辑。
+
+### 文章类页面
+
+这里要考虑文章的类型，是把文章按照类型分成不同的 Component，还是统统使用一个 Component 呢？
+
+从文章列表来看，这四种文章的页面展示都不太一样，内容也不太一样，那难道我们真的是要每种文章类型使用不同的 Component 吗？
+
+好吧，我们看一下有哪些比较通用的部分吧，既然不能在这一层进行统一，那我们看看里面会不会有重复的东西。
+
+突然发现，我们可以把 头像+名字+时间 提取出来当做一个 Component，仔细观察，发现还有文章的浏览次数和评论的展示部分，评论也可以抽出来。
+
+### 通用型
+
+刚刚提到的
+
+- 用户信息（头像+名字+时间）
+- 浏览次数
+- 评论
+
+观察其它相关内容
+
+- 右下角的 `+` 按钮
+- 返回按钮
+- 搜索功能
+
+### 创建文件
+
+好吧，先整理这些，为这些 Component 创建目录和文件
+
+![](http://p9.qhimg.com/t012b935c61098dda65.jpg)
+
+我们把强业务相关的放在 `bussiness` 文件夹内，通用的放在 `common` 里。
+
+`helps` 里的 arc.js/list.js 分别代表文章页和列表页，其它文章类 component 也类似，`less` 文件分别是它们的样式文件。
+
+## Service
+
+目前来说初期阶段，还没有太多的基础服务，在业务开发中，需要通用服务的地方会越来越多。
+
+比如一定会需要一个服务来请求API，不管是使用 XMLHttpRequest 还是 Fetch。
+
+未来可能还需要通用弹窗服务，通用错误服务，还有更多贴近业务的服务。
+
+## Mock
+
+建议每一个模块的mock文件分开写，这样不容易乱掉。
+
+![](http://p8.qhimg.com/t01fe369ec9fb783b54.jpg)
+
+
+## 总结
+
+举例的这个系统并不打，主要还是以数据展示为主，并没有特别多的数据操作和数据依赖关系以及输出处理相关的事务，所以实现起来还是相对简单。
+
+这篇文章主要讲了目录结构的和组件的创建，还没有叙述如何连接使用，下篇文章将会连接 Router/Component/Model。
+
