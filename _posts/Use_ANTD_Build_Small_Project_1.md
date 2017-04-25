@@ -5,7 +5,7 @@ category: Other
 date: 2017-04-24 17:33:00
 ---
 ## 前言
-去年11月的时候接手了一个小型的后台系统，负责前端开发，团队经过研究选择了从来没有用过的 [Ant Design](https://ant.design/index-cn)，作为一门设计语言([什么是设计语言](https://www.zhihu.com/question/24283181/answer/102586216))，如果我们此次项目使用 Ant Design 获得收益，我们以后所有的新的 To B 业务 ([To B 业务具体指什么](https://www.zhihu.com/question/37841619))将继续使用这门设计语言。
+去年11月的时候接手了一个小型的后台系统，负责前端开发，团队经过研究选择了从来没有用过的 [Ant Design](https://ant.design/index-cn)，作为一门设计语言([什么是设计语言](https://www.zhihu.com/question/47144626/answer/121635402))，如果我们此次项目使用 Ant Design 获得收益，我们以后所有的新的 To B 业务 ([To B 业务具体指什么](https://www.zhihu.com/question/37841619))将继续使用这门设计语言。
 
 虽然说 Ant Design 是一门设计语言，但官方给我们提供了一套基于 Ant Design 开发出来的完整的 React UI 组件库，并且提供了一套完整的解决方案。
 
