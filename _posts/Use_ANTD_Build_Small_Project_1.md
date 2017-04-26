@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 使用 Ant Design + dva 构建小型前端项目 (一)
-category: Other
+category: 工具&框架
 date: 2017-04-24 17:33:00
 ---
 ## 前言
@@ -10,6 +10,10 @@ date: 2017-04-24 17:33:00
 虽然说 Ant Design 是一门设计语言，但官方给我们提供了一套基于 Ant Design 开发出来的完整的 React UI 组件库，并且提供了一套完整的解决方案。
 
 官方提供了一套 npm + webpack 的解决方案来辅助开发，主要工具也是阿里大神开发的 [dva](https://github.com/dvajs/dva)，dva 是一个基于 react 和 redux 的轻量应用框架，具体可参考[项目实战](https://ant.design/docs/react/practical-projects-cn)。
+
+在去年11月做项目的时候，dva 的版本还是 0.x，时至今日，已经升级到1.x，使用方法也不一样了。
+
+这是本系列的第一篇文章，主要根据 dva 来搭建起目录结构。
 
 ## dva 简介
 
@@ -22,16 +26,28 @@ dva 的数据流向
 
 具体参考：[dva 概念](https://github.com/dvajs/dva/blob/master/docs/Concepts_zh-CN.md)
 
+dva 在 v1.0 以后使用了 [roadhog](https://github.com/sorrycc/roadhog) 来作为项目脚手架，用来负责管理本地开发服务以及项目编译等。
+
+## 创建项目
+
+使用 dva 创建一个初始项目，项目会自动创建一个 demo。
+
+![](http://p3.qhimg.com/t017231fc68f3785c69.jpg)
+
+
 ## 代码目录结构
 
-![](http://p5.qhimg.com/t01304dfb1caf86d47e.jpg)
-
-- `components` 对应的是 dva 里面的 Component 。
-- `view-model` 对应的是 dva 里面的 Model ，因为与 react 和 redux 试图渲染强相关，所以定为view-model。
-- `routers` 对应的是 dva 里面的 Router 。
-- `services` 里面写一写基础服务，比如 API 请求、错误处理、事件系统、弹窗提醒等服务。
-- `data-model` 是业务数据模型，如果没有可省略，如果和服务关系很强，可以写到services里面。
-- `mocks` Mock 数据
+- `mocks` Mock 数据存放的位置
+- `public` 静态页面存放的位置
+- `src` 代码目录
+    - `assets` 资源目录，一些通用的 css/images
+    - `components` 对应的是 dva 里面的 Component。
+    - `models` 对应的是 dva 里面的 Model。
+    - `routes` 是各个页面的入口，这里来引用功能所需的组件。
+    - `services` 里面定义一些基础服务，比如 API 请求、错误处理、事件系统、弹窗提醒等服务。
+    - `utils` 存放一些工具方法或类
+- `.roadhogrc` roadhog的配置文件。
+- `.roadhogrc.mock.js` 管理 Mock 数据的地方
 
 拿我大学在的社团鲁大学生网的最新版 Android App 举例
 
@@ -63,17 +79,19 @@ dva 的数据流向
 
 ![](http://p0.qhimg.com/t013da4d0860a0bf518.jpg)
 
-## Router
+## Route
 
-Model 搞定了，我们开始创建 Router。
+Model 搞定了，我们开始创建 Route。
 
-如果我们每个功能的页面都要创建一个 Router 的话，我们可能会创建很多。我们可以通过需要展示的文章类型来创建 Router。
+其实这里的 Route 也是一个 Component，只不过是用来为不同的功能引用不用的 Component 的中转站，用来提供给 router.js 文件当做功能入口的。
 
-所以我把所有类似文章类型的列表使用 Router 内容使用一个 Router，然后在 Router 里面来根据类型引用不同的 Component。
+如果我们每个功能的页面都要创建一个 Router 的话，我们可能会创建很多。我们可以通过需要展示的文章类型来创建 Route。
+
+所以我把所有类似文章类型的列表使用 Route 内容使用一个 Route，然后在 Route 里面来根据类型引用不同的 Component。
 
 另外还需要一个首页。
 
-![](http://p3.qhimg.com/t0175a8b476c474f36e.jpg)
+![](http://p6.qhimg.com/t0143a1ca3a2a1d9619.jpg)
 
 ## Component
 
@@ -133,7 +151,7 @@ Component 这边主要是根据业务来提供一些展示数据用的组件。
 
 建议每一个模块的mock文件分开写，这样不容易乱掉。
 
-![](http://p8.qhimg.com/t01fe369ec9fb783b54.jpg)
+![](http://p5.qhimg.com/t01bf73e9dbcb4f2286.jpg)
 
 
 ## 总结
@@ -141,4 +159,3 @@ Component 这边主要是根据业务来提供一些展示数据用的组件。
 举例的这个系统并不大，主要还是以数据展示为主，并没有特别多的数据操作和数据依赖关系以及数据处理相关的事务，所以实现起来还是相对简单。
 
 这篇文章主要讲了目录结构的和组件的创建，还没有叙述如何连接使用，下篇文章将会连接 Router/Component/Model。
-

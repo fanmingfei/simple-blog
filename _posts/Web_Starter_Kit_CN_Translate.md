@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Web Starter Kit 介绍"
-category: 工具
+category: 工具&框架
 date: 2016-06-15 00:00:00
 ---
 
