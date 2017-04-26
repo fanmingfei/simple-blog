@@ -146,7 +146,7 @@ Component 这边主要是根据业务来提供一些展示数据用的组件。
 
 我们把强业务相关的放在 `bussiness` 文件夹内，通用的放在 `common` 里。
 
-`helps` 里的 arc.js/list.js 分别代表文章页和列表页，其它文章类 component 也类似，`less` 文件分别是它们的样式文件。
+`helps` 里的 Arc.js/List.js 分别代表文章页和列表页，其它文章类 component 也类似，`less` 文件分别是它们的样式文件。
 
 ## Service
 
