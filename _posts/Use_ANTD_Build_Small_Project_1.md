@@ -32,6 +32,12 @@ dva 在 v1.0 以后使用了 [roadhog](https://github.com/sorrycc/roadhog) 来�
 
 使用 dva 创建一个初始项目，项目会自动创建一个 demo。
 
+```
+npm install -g dva-cli
+mkdir demo && cd demo
+dva init
+```
+
 ![](http://p3.qhimg.com/t017231fc68f3785c69.jpg)
 
 
@@ -87,7 +93,7 @@ Model 搞定了，我们开始创建 Route。
 
 如果我们每个功能的页面都要创建一个 Router 的话，我们可能会创建很多。我们可以通过需要展示的文章类型来创建 Route。
 
-所以我把所有类似文章类型的列表使用 Route 内容使用一个 Route，然后在 Route 里面来根据类型引用不同的 Component。
+所以我把所有类似文章类型的列表使用一个 Route，然后在 Route 里面来根据类型引用不同的 Component。
 
 另外还需要一个首页。
 
