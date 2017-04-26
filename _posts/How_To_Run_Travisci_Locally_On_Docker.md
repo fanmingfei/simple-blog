@@ -66,7 +66,7 @@ less ~/.ssh/id_rsa.pub
 ```
 
 ```
-# Copy the contents of the id_rsa.pub
+# 复制 id_rsa.pub 里的内容
 
 ```
 
