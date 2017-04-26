@@ -99,7 +99,7 @@ Model 搞定了，我们开始创建 Route。
 
 ![](http://p6.qhimg.com/t0143a1ca3a2a1d9619.jpg)
 
-> 备注：所有的 Component 我们都用大驼峰的明明方法命名，与里面的 React 组件名称保持一直。
+> 备注：所有的 Component 我们都用大驼峰的命名方法命名，与里面的 React 组件名称保持一直。
 
 ## Component
 
