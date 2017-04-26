@@ -1,9 +1,3 @@
----
-layout: post
-title: 使用 dva 构建小型前端项目 (一)
-category: 工具&框架
-date: 2017-04-24 17:33:00
----
 ## 前言
 去年11月的时候接手了一个小型的后台系统，负责前端开发，团队经过研究选择了从来没有用过的 [Ant Design](https://ant.design/index-cn)，作为一门设计语言([什么是设计语言](https://www.zhihu.com/question/47144626/answer/121635402))，如果我们此次项目使用 Ant Design 获得收益，我们以后所有的新的 To B 业务 ([To B 业务具体指什么](https://www.zhihu.com/question/37841619))将继续使用这门设计语言。
 
@@ -168,3 +162,5 @@ Component 这边主要是根据业务来提供一些展示数据用的组件。
 举例的这个系统并不大，主要还是以数据展示为主，并没有特别多的数据操作和数据依赖关系以及数据处理相关的事务，所以实现起来还是相对简单。
 
 这篇文章主要讲了目录结构的和组件的创建，还没有叙述如何连接使用，下篇文章将会连接 Route/Component/Model。
+
+> 原文地址：https://fanmingfei.com/posts/Build_Small_Project_by_Dva_1.html
