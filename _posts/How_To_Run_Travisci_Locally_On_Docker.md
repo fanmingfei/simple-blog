@@ -100,15 +100,12 @@ vi ci.sh
 ```
 
 ```
-# in Vi type “/branch” to search and add the right branch name
 # 在 vi 工具里输入 “/branch” 来查找到分支设置的位置，并且将其修改正确
 # — branch\=\’\NEW_BRANCH’\
 
 ```
 
 ```
-# You most likely will need to edit ci.sh as it ignores ‘matrix’ and ‘env’ keywords
-
 # 你有可能需要编辑ci.sh来忽略 “matrix” 和 “env” 关键词
 bash ci.sh
 
