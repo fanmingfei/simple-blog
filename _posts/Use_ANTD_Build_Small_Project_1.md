@@ -97,7 +97,7 @@ Model 搞定了，我们开始创建 Route。
 
 另外还需要一个首页。
 
-![](http://p6.qhimg.com/t0143a1ca3a2a1d9619.jpg)
+![](http://p2.qhimg.com/t01ad1439c217c20d3e.jpg)
 
 > 备注：所有的 Component 我们都用大驼峰的命名方法命名，与里面的 React 组件名称保持一直。
 
@@ -142,7 +142,7 @@ Component 这边主要是根据业务来提供一些展示数据用的组件。
 
 好吧，先整理这些，为这些 Component 创建目录和文件
 
-![](http://p5.qhimg.com/t017007dec43aeede72.jpg)
+![](http://p0.qhimg.com/t01a7db457f6c366bf4.jpg)
 
 我们把强业务相关的放在 `bussiness` 文件夹内，通用的放在 `common` 里。
 
