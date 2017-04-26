@@ -1,3 +1,10 @@
+---
+layout: post
+title: 使用 dva 构建小型前端项目（一）
+category: 工具&框架
+date: 2017-04-25 21:40:03
+---
+
 ## 前言
 去年11月的时候接手了一个小型的后台系统，负责前端开发，团队经过研究选择了从来没有用过的 [Ant Design](https://ant.design/index-cn)，作为一门设计语言([什么是设计语言](https://www.zhihu.com/question/47144626/answer/121635402))，如果我们此次项目使用 Ant Design 获得收益，我们以后所有的新的 To B 业务 ([To B 业务具体指什么](https://www.zhihu.com/question/37841619))将继续使用这门设计语言。
 
