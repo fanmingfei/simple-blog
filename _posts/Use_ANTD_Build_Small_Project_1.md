@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用 Ant Design + dva 构建小型前端项目 (一)
+title: 使用 dva 构建小型前端项目 (一)
 category: 工具&框架
 date: 2017-04-24 17:33:00
 ---
