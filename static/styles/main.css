@@ -134,9 +134,13 @@ main article img {
     max-width: 100%;
 }
 
-main article h2 {
+main article h1 {
     font-size: 1.7em;
     border-bottom: 1px solid #ddd;
+}
+
+main article h2 {
+    font-size: 2em;
 }
 
 main article h3 {
