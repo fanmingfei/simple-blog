@@ -14,23 +14,23 @@
                     <%=moment.utc(post.timeStr).format('MMM DD, YYYY')%>
                 </time>
             </div>
-            <h2 class="title">
+            <h1 class="title">
                 <a href="<%=post.url%>">
                     <%-post.title%>
                 </a>
-            </h2>
+            </h1>
             <div class="content">
                 <%- marked(post.content)%>
             </div>
             <div class="comment">
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
                 <script>
-                var cloudTieConfig = {
-                    // url: document.location.href,
-                    sourceId: "<%-post.title%>",
-                    productKey: "1a391d7428d04c1284baf703fd3dbce7",
-                    target: "cloud-tie-wrapper"
-                };
+                    var cloudTieConfig = {
+                        // url: document.location.href,
+                        sourceId: "<%-post.title%>",
+                        productKey: "1a391d7428d04c1284baf703fd3dbce7",
+                        target: "cloud-tie-wrapper"
+                    };
                 </script>
                 <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
             </div>
