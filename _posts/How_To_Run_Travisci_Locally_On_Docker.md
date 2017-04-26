@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 在 Docker 上运行本地版的 TravisCI – Google Developers – Medium
+title: [译]在 Docker 上运行本地版的 TravisCI
 category: 工具&框架
 date: 2017-04-26 21:23:00
 ---
