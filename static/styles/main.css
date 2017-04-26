@@ -135,12 +135,12 @@ main article img {
 }
 
 main article h1 {
-    font-size: 1.7em;
-    border-bottom: 1px solid #ddd;
+    font-size: 2em;
 }
 
 main article h2 {
-    font-size: 2em;
+    font-size: 1.7em;
+    border-bottom: 1px solid #ddd;
 }
 
 main article h3 {
