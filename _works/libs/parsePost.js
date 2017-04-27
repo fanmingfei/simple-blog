@@ -7,7 +7,7 @@ marked.setOptions({
     pedantic: false,
     sanitize: false,
     smartLists: true,
-    smartypants: false
+    smartypants: true
 });
 
 module.exports = marked;
