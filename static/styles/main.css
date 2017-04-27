@@ -130,6 +130,13 @@ main article p {
     margin-bottom: 1rem;
 }
 
+main article blockquote {
+    border-left: .5em solid #eee;
+    margin-left: 0;
+    max-width: 476px;
+    padding: 0 2em;
+}
+
 main article img {
     max-width: 100%;
 }

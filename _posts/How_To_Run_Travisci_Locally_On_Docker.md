@@ -5,7 +5,8 @@ category: 工具&框架
 date: 2017-04-26 21:23:00
 ---
 
-> 首发于众成翻译：[在 Docker 上运行本地版的 TravisCI](http://zcfy.cc/translate/2682)
+> 首发于众成翻译：[在 Docker 上运行本地版的 TravisCI](http://zcfy.cc/article/2701)
+
 > 原文链接：[How to Run TravisCI locally on Docker](https://medium.com/google-developers/how-to-run-travisci-locally-on-docker-822fc6b2db2e)
 
 不想让 Github 私有仓库代码被线上版 Travis 服务获取？面对构建异常抓狂却没有日志可偱？把他跑在本地吧！([Interested in TravisCI configuration](https://medium.com/google-developers/hacks-i-did-to-use-travis-ci-with-firebase-ios-quickstarts-da67c4986f29)?)
