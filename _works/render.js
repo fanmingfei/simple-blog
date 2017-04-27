@@ -64,7 +64,7 @@ function renderArchives() {
     var newArchives = [];
     archives.forEach((arcs, i) => {
         newArchives.push({
-            date: moment(moment(arcs[0].timeStr).format("YYYY-MM"), "YYYY-MM").valueOf(),
+            date: moment.utc(moment(arcs[0].timeStr).format("YYYY-MM"), "YYYY-MM").valueOf(),
             posts: arcs
         })
     })
