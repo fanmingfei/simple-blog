@@ -84,7 +84,7 @@ dva init
 
 那我们可以看一下具体需要哪些 Model 了
 
-![](http://p0.qhimg.com/t013da4d0860a0bf518.jpg)
+![](http://p9.qhimg.com/t01f0f7da0f0cf01b54.jpg)
 
 ## Route
 
