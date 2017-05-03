@@ -126,7 +126,7 @@ function RouterConfig({ history }) {
 export default RouterConfig;
 ```
 
-未完待续。。。
+未完待续……
 
 
 
