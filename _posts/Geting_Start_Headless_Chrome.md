@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "开始使用 Headless Chrome"
+title: "Headless Chrome 入门"
 category: Other
 date: 2017-05-12 20:00:00
 ---
