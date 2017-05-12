@@ -12,17 +12,17 @@ date: 2017-05-12 20:00:00
 
 &nbsp;|&nbsp; Google Developers
 
-Headless Chrome 浏览器正在运行 Chrome 59 内核。就是在 Headless 环境中运行 Chrome 浏览器。实际上，就是脱离 chrome 浏览器的情况下运行一个 Chrome！所有 Chrome 和 Blink 渲染引擎提供给现代 web 平台的特性。
+Headless Chrome 浏览器正在运行 Chrome 59 内核。就是在 Headless 环境中运行 Chrome 浏览器。实际上，就是脱离 chrome 浏览器的情况下运行一个 Chrome！它给命令行提供所有 Chrome 和 Blink 渲染引擎提供给现代 web 平台的特性。
 
 它有什么用呢？
 
 Headless 浏览器可以用于自动化测试，也可以在没有 UI 界面的服务器环境中运行，是一个不错的工具。例如，您可能需要针对一个真实的网页进行测试，为 web 页面创建一个PDF，或者只是检查浏览器如何呈现URL。
 
-注意：<span style="color: rgb(51, 51, 51); font-size: 16px;">Chrome 59 已经在 </span>Mac 和 Linux 中支持 Headless 模式。[Windows 支持](https://bugs.chromium.org/p/chromium/issues/detail?id=686608)也很快就要上线！要查看您的 Chrome 版本，请打开 `chrome://version`。
+注意：Chrome 59 已经在 Mac 和 Linux 中支持 Headless 模式。[Windows 支持](https://bugs.chromium.org/p/chromium/issues/detail?id=686608)也很快就要上线！要查看您的 Chrome 版本，请打开 `chrome://version`。
 
 ## 开始使用 Headless (CLI)
 
-开始使用 headless 模式最简单的方式是在命令行下打开 Chrome binary。 <span style="color: rgb(51, 51, 51); font-size: 16px;">如果你已经下载了 Chrome 59+，需要带 `--headless` 参数启动 Chrome。</span>
+开始使用 headless 模式最简单的方式是在命令行下打开 Chrome binary。 如果你已经下载了 Chrome 59+，需要带 `--headless` 参数启动 Chrome。
 
     chrome \
       --headless \                   # Runs Chrome in headless mode.
@@ -86,7 +86,7 @@ DevTools 远程调试 UI
 
 ### 打开 Chrome
 
-在前面的章节，我们使用 `--headless --<span style="color: rgb(51, 51, 51); font-size: 16px;">remote-debugging-port=9222</span>` <span style="color: rgb(51, 51, 51); font-size: 16px;">参数</span>手动启动 Chrome。但是，如果要全面自动化测试，您可能希望从应用程序中打开Chrome。
+在前面的章节，我们使用 `--headless --remote-debugging-port=9222` 参数手动启动 Chrome。但是，如果要全面自动化测试，您可能希望从应用程序中打开Chrome。
 
 一种方式是使用 child_process：
 
@@ -102,11 +102,11 @@ DevTools 远程调试 UI
       ...
     });
 
-但是当你想要实现一个跨平台的解决方案，这个事情就变得棘手了。只需要要看看 <span style="color: rgb(51, 51, 51); font-size: 16px;">Chrome 的应用程序</span>路径:(
+但是当你想要实现一个跨平台的解决方案，这个事情就变得棘手了。只需要要看看 Chrome 的应用程序路径:(
 
-#### <span style="font-size: 16px;">使用 Lighthouse 的 ChromeLauncher 模块</span>
+#### 使用 Lighthouse 的 ChromeLauncher 模块
 
-Lighthouse 是检测web应用质量的一个极好的工具。大多数人没有意识到<span style="color: rgb(51, 51, 51); font-size: 16px;">一件事</span>，它附带了了一些非常用的可以工作在 Chrome 上的模块。其中有一个就是 ChromeLauncher。Chrome 安装后，启动一个调试实例，打开浏览器，并且当你的程序完成后关闭他。多亏了 Node，他可以跨平台工作。
+Lighthouse 是检测web应用质量的一个极好的工具。大多数人没有意识到一件事，它附带了了一些非常用的可以工作在 Chrome 上的模块。其中有一个就是 ChromeLauncher。Chrome 安装后，启动一个调试实例，打开浏览器，并且当你的程序完成后关闭他。多亏了 Node，他可以跨平台工作。
 
 注意：Lighthouse 团队正在开发 ChromeLauncher 的独立软件包，将会改善之前的 API。如果你有新的[反馈](https://github.com/GoogleChrome/lighthouse/issues/2092)可以发送给我们。
 
@@ -147,7 +147,7 @@ Lighthouse 是检测web应用质量的一个极好的工具。大多数人没有
       ...
     });
 
-<span style="color: rgb(51, 51, 51); font-size: 16px;">这个脚本其实没有什么太多作用</span>，但您应该在任务管理器中看到一个 Chrome 启动实例，他加载了 about:blank。记住，这里没有任何浏览器界面。这是 Headless 模式。
+这个脚本其实没有什么太多作用，但您应该在任务管理器中看到一个 Chrome 启动实例，他加载了 about:blank。记住，这里没有任何浏览器界面。这是 Headless 模式。
 
 如果想控制浏览器，我们需要 DevTools 协议。
 
@@ -155,7 +155,7 @@ Lighthouse 是检测web应用质量的一个极好的工具。大多数人没有
 
 [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface) 是一个非常赞的 Node 包，它为 DevTools 协议提供了非常有用的API。你可以将它用于编排 Headless Chrome结合，页面导航，获取页面的信息。
 
-警告：DevTools协议可以做一些有趣的东西，但是他的入门并不简单。我建议先花费一些时间来浏览[DevTools Protocol Viewer](https://chromedevtools.github.io/devtools-protocol/)。<span style="color: rgb(51, 51, 51); font-size: 16px;">然后，移步至 chrome-remote-interface 的 API 文档去看如何包装原始协议。</span>  
+警告：DevTools协议可以做一些有趣的东西，但是他的入门并不简单。我建议先花费一些时间来浏览[DevTools Protocol Viewer](https://chromedevtools.github.io/devtools-protocol/)。然后，移步至 chrome-remote-interface 的 API 文档去看如何包装原始协议。  
 
 让我们安装依赖：
 
@@ -265,12 +265,12 @@ Lighthouse 是检测web应用质量的一个极好的工具。大多数人没有
 
 工具
 
-*   [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface) - <span style="color: rgb(11, 21, 29); font-size: 16px;">基于 DevTools 协议的 Node 模块</span>
+*   [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface) - 基于 DevTools 协议的 Node 模块
 *   Lighthouse - Web app 质量自动化测试工具
 
 Demos
 
-*   “The Headless Web” - <span style="color: rgb(51, 51, 51); font-size: 16px;"> Paul Kinlan 发表的一篇关于使用 Headless 的博客</span>
+*   “The Headless Web” -  Paul Kinlan 发表的一篇关于使用 Headless 的博客
 
 ## 常见问题解答
 
@@ -280,7 +280,7 @@ Demos
 
 我们仍然需要 Xvfb？
 
-<span style="color: rgb(51, 51, 51); font-size: 16px;">不需要。Headless Chrome 不需要窗口，所以不需要像 Xvfb 这样的展示服务。</span>  
+不需要。Headless Chrome 不需要窗口，所以不需要像 Xvfb 这样的展示服务。  
 没有它，你也可以高高兴兴的做自动化测试。
 
 什么是 Xvfb？XXvfb是Unix系统的内存显示服务器，可让您运行图形应用程序（如Chrome），无需附加物理显示。许多人使用 Xvfb 运行早期版本的 Chrome 进行 “Headless” 测试。
@@ -289,9 +289,9 @@ Demos
 
 看一下 [lighthouse-cli](https://github.com/ebidel/lighthouse-ci) 。它使用Ubuntu作为基本映像，并在App Engine Flexible 容器中安装+运行 Lighthouse。
 
-Headless Chrome 可以和 <span style="color: rgb(51, 51, 51); font-size: 16px;">Selenium / WebDriver / ChromeDriver 一起使用吗？</span>
+Headless Chrome 可以和 Selenium / WebDriver / ChromeDriver 一起使用吗？
 
-当然，<span style="color: rgb(51, 51, 51); font-size: 16px;">Selenium 为 Chrome 浏览器开放了一个完整的实例。</span>换句话说，他是一个自动化解决方案并不是一个完整的 headless。但是，Selenium 在未来可以使用 `--headless`。
+当然，Selenium 为 Chrome 浏览器开放了一个完整的实例。换句话说，他是一个自动化解决方案并不是一个完整的 headless。但是，Selenium 在未来可以使用 `--headless`。
 
 如果你想试一试，我建议你先学习 [Runing Selenium with Headless Chrome](https://intoli.com/blog/running-selenium-with-headless-chrome/)。
 
@@ -299,7 +299,7 @@ Headless Chrome 可以和 <span style="color: rgb(51, 51, 51); font-size: 16px;"
 
 它与PhantomJS有什么关系？
 
-<span style="color: rgb(51, 51, 51); font-size: 16px;">Headless Chrome 是一个和 [PhantomJS](http://phantomjs.org/) 相似的工具。</span>两者都可用于 Headless 环境中进行自动化测试。两者之间是Phantom使用旧版本的WebKit作为其渲染引擎，而Headless Chrome使用最新版本的Blink。
+Headless Chrome 是一个和 [PhantomJS](http://phantomjs.org/) 相似的工具。两者都可用于 Headless 环境中进行自动化测试。两者之间是Phantom使用旧版本的WebKit作为其渲染引擎，而Headless Chrome使用最新版本的Blink。
 
 目前，Phantom 还提供了比 [DevTools 协议](https://chromedevtools.github.io/devtools-protocol/)更高级别的API。
 
