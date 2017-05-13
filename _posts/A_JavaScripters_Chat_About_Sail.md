@@ -191,7 +191,13 @@ count;
 ![](http://p6.qhimg.com/t015545ed86ce201cdb.jpg)
 ![](http://p1.qhimg.com/t0144a26e84d1886f80.jpg)
 
+从我的机器上测试可以看出，for 是别 split 要快
+
+@Zac的 和 for 2 是差不多的，但是 @Zac 讲 `var i = 0` 提出来了，稳定性上提升了不少。
+
 测试地址：
 
-[https://jsperf.com/splite-for-pg](https://jsperf.com/splite-for-pg);
+[https://jsperf.com/splite-for-pg](https://jsperf.com/splite-for-pg)
+
+
 
