@@ -139,7 +139,7 @@ count;
 ```
 
 
-改良过的跳过“过”字
+改良过的跳过“过”字的版本
 ```
 var count = 0;
 var len = data.length;
@@ -190,15 +190,73 @@ count;
 ```
 
 
-我的机器：
+我的机器（chrome58）：
 
-![](http://p5.qhimg.com/t0180730edc5857d284.jpg)
-![](http://p6.qhimg.com/t015545ed86ce201cdb.jpg)
 ![](http://p1.qhimg.com/t0144a26e84d1886f80.jpg)
+
+我朋友的机器（chrome57）：
+
+![](http://p2.qhimg.com/t01ca179ea4d01ca862.jpg)
 
 从我的机器上测试可以看出，for 是别 split 要快
 
+稍等，我发现 for 1 里面的 i 也没有定义，我把 for 1 里面的 i 提取和出来定义看一下。
+
+发现，for 1 变成了最快的。使用 `var` 关键字来定义 `i` 可以提升效率？
+
+![](http://p3.qhimg.com/t0197535a2c2a80096a.jpg)
+
+
 @Zac的 和 for 2 是差不多的，但是 @Zac 将 `var i = 0` 提出来了，稳定性上提升了不少。
+
+总结上面的经验，我写下了我的代码：
+
+```
+var count = 0;
+var len = data.length;
+var i = 0;
+for(;;){
+   if (data.charCodeAt(i) == 39128 && data.charCodeAt(i + 1) == 36807) {
+        count ++;
+    } else if (data.charCodeAt(i) == 36807 && data.charCodeAt(i - 1) == 39128) {
+        count ++;
+    }
+   i+=2
+  if (i >= len) break;
+}
+count;
+```
+
+再做一次测试(chrome58)：
+
+![](http://p5.qhimg.com/t011e081db8ca80548b.jpg)
+
+我的手机 safari
+
+![](http://p0.qhimg.com/t0131c85c96841a1941.png)
+![](http://p9.qhimg.com/t010fdbaa362db2f979.png)
+
+我朋友的机器(chrome57)：
+
+![](http://p5.qhimg.com/t0164dae80d68834490.png)
+
+我用了我机器上的(chrome60)
+
+![](http://p4.qhimg.com/t0186507e4679ddafa2.jpg)
+
+在金丝雀版里的 @Zac是最快的，`var i = 0` 提不提取影响不大。
+
+所以我在想，是否不需要提取 `var i = 0`  也不需要对for循环做一些参数的优化会比较快呢？
+
+果然！我修改了一下，剧情再次反转！
+
+![](http://p8.qhimg.com/t0119ae7f448ad5b6c7.jpg)
+
+那么问题来了！
+
+- 为什么 chrome57 上 `split` 比 `for` 快？
+- chrome60 对 `for` 循环做了哪些优化？
+- 等等
 
 测试地址：
 
