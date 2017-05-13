@@ -21,16 +21,25 @@
             </h1>
             <div class="content">
                 <%- marked(post.content)%>
+                    <div class="copyright">
+                        <h2 class="title">版权声明</h2>
+                        <div class="content">本博客文章均为范明非原创/翻译，转载请注明出处。
+                            <br/> 原文地址：
+                            <a href="<%-post.url%>">
+                                <%-post.url%>
+                            </a>
+                        </div>
+                    </div>
             </div>
             <div class="comment">
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
                 <script>
-                    var cloudTieConfig = {
-                        // url: document.location.href,
-                        sourceId: "<%-post.title%>",
-                        productKey: "1a391d7428d04c1284baf703fd3dbce7",
-                        target: "cloud-tie-wrapper"
-                    };
+                var cloudTieConfig = {
+                    // url: document.location.href,
+                    sourceId: "<%-post.title%>",
+                    productKey: "1a391d7428d04c1284baf703fd3dbce7",
+                    target: "cloud-tie-wrapper"
+                };
                 </script>
                 <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
             </div>
