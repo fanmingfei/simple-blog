@@ -250,7 +250,7 @@ count;
 
 果然！我修改了一下，剧情再次反转！
 
-![](http://p8.qhimg.com/t0119ae7f448ad5b6c7.jpg)
+![](http://p9.qhimg.com/t01fb305d8b8c88f07c.jpg)
 
 那么问题来了！
 
