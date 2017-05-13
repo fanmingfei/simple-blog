@@ -35,65 +35,65 @@ date: 2017-05-13 10:00:00
 
 然后，@Zac 做出了疑问，是否 for 会更快
 
-!()[http://p3.qhimg.com/t018d84e2cba9c52d34.jpg]
+![](http://p3.qhimg.com/t018d84e2cba9c52d34.jpg)
 
 直接抛出 perf 后，群主众人提出了异议
 
-!()[http://p9.qhimg.com/t01109a046b65458639.jpg]
+![](http://p9.qhimg.com/t01109a046b65458639.jpg)
 
 
 提出 length 的检测结果：
 
-!()[http://p7.qhimg.com/t01f6d1e73f53a65192.jpg]
+![](http://p7.qhimg.com/t01f6d1e73f53a65192.jpg)
 
-!()[http://p0.qhimg.com/t01518956340f1fa121.jpg]
+![](http://p0.qhimg.com/t01518956340f1fa121.jpg)
 
 虽然对刚刚的逻辑有一些不满意
 
-!()[http://p9.qhimg.com/t0187f75a16f2fe8d30.jpg]
+![](http://p9.qhimg.com/t0187f75a16f2fe8d30.jpg)
 
 但是也没有去优化
 
 接下来 @该群已解散 提出了新的方案
 
-!()[http://p2.qhimg.com/t01cf62a3ee4fce835a.jpg]
+![](http://p2.qhimg.com/t01cf62a3ee4fce835a.jpg)
 
 结果是：
 
-!()[http://p0.qhimg.com/t01267428fcd513aa70.jpg]
+![](http://p0.qhimg.com/t01267428fcd513aa70.jpg)
 
 
 后来发现 replace 写错了。
 
-!()[http://p6.qhimg.com/t019fafce33ef833aa9.jpg]
+![](http://p6.qhimg.com/t019fafce33ef833aa9.jpg)
 
 
 最后 @Zac 把 var i 提出来了
 
-!()[http://p2.qhimg.com/t016a79279af25548ae.jpg]
+![](http://p2.qhimg.com/t016a79279af25548ae.jpg)
 
 看起来快了那么那么多，可惜的是... 他写错了代码
 
 后来，他把代码改好了
 
-!()[http://p2.qhimg.com/t01539699626b2e6f7f.jpg]
+![](http://p2.qhimg.com/t01539699626b2e6f7f.jpg)
 
 发现还是 split 快
 
 后来 @hugo 发了新 perf
 
-!()[http://p7.qhimg.com/t01a87a999ff945b2b0.jpg]
+![](http://p7.qhimg.com/t01a87a999ff945b2b0.jpg)
 
 第一个是 for ，第二个是 split 这里也是 split 快。
 
 
 接着 @rannn🐨 发了一个
 
-!()[http://p4.qhimg.com/t01f30e687c91dc20fe.jpg]
+![](http://p4.qhimg.com/t01f30e687c91dc20fe.jpg)
 
 但是 @Zac 又发了一个
 
-!()[http://p5.qhimg.com/t01a0abab917f0074d5.jpg]
+![](http://p5.qhimg.com/t01a0abab917f0074d5.jpg)
 
 for 最快，不过他们两个的写法不太一样。
 
