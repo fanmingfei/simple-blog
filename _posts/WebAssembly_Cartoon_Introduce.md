@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[译]用漫画介绍 WebAssembly"
+title: "[译]图说 WebAssembly"
 category: JavaScript
 date: 2017-05-14 23:59:59
 ---
