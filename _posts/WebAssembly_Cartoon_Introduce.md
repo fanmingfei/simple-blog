@@ -1,14 +1,18 @@
 ---
 layout: post
-title: "[译]WebAssembly 漫画简介 - Smashing Magazine"
+title: "[译]用漫画介绍 WebAssembly"
 category: JavaScript
 date: 2017-05-14 23:59:59
 ---
 
+# 用漫画介绍 WebAssembly
 
 > 本文转载自：[众成翻译](http://www.zcfy.cc)
+
 > 译者：[明非](http://www.zcfy.cc/@edire)
+
 > 链接：[http://www.zcfy.cc/article/2799](http://www.zcfy.cc/article/2799)
+
 > 原文：[https://www.smashingmagazine.com/2017/05/abridged-cartoon-introduction-webassembly/](https://www.smashingmagazine.com/2017/05/abridged-cartoon-introduction-webassembly/)
 
 最近，WebAssembly 在 JavaScript 圈非常的火！人们都在谈论它多么多么快，怎样怎样改变 Web 开发领域。但是没有人讲他到底为什么那么快。在这篇文章里，我将会帮你了解 WebAssembly 到底为什么那么快。
@@ -124,7 +128,7 @@ date: 2017-05-14 23:59:59
 *   Parsing - 讲源码转换成解释器可以运行的东西所用的事情。  
 
 *   Compiling + optimizing - 花费在基础编译和优化编译上的时间。有一些优化编译的工作不在主线程，所以这里并不包括这些时间。
-*   Re-optimizing - 当预先编译优化的代码不能被优化的情况下，JIT 将这些代码重新优化，如果不能重新优化那么久丢给基础编译去做。这个过程叫做去优化。
+*   Re-optimizing - 当预先编译优化的代码不能被优化的情况下，JIT 将这些代码重新优化，如果不能重新优化那么久丢给基础编译去做。这个过程叫做重新优化。
 *   Execution - 执行代码的过程
 *   Garbage collection - 清理内存的时间  
 
@@ -189,13 +193,13 @@ JavaScript 源码一旦被下载到浏览器，源将被解析为抽象语法树
 
 （[看大图](https://www.smashingmagazine.com/wp-content/uploads/2017/05/12-diagram_compare03-large-opt.png)）
 
-#### 去优化
+#### 重新优化
 
 有时 JIT 抛出一个优化版本的代码，然后重新优化。
 
-JIT 基于运行代码的假设不正确时，会发生这种情况。例如，当进入循环的变量与先前的迭代不同时，或者在原型链中插入新函数时，会发生去优化。
+JIT 基于运行代码的假设不正确时，会发生这种情况。例如，当进入循环的变量与先前的迭代不同时，或者在原型链中插入新函数时，会发生重新优化。
 
-在 WebAssembly 中，类型是明确的，因此 JIT 不需要根据运行时收集的数据对类型进行假设。这意味着它不必经过去优化周期。
+在 WebAssembly 中，类型是明确的，因此 JIT 不需要根据运行时收集的数据对类型进行假设。这意味着它不必经过重新优化的周期。
 
 [![WebAssembly doesn’t have to go through reoptimization cycles](http://p0.qhimg.com/t01f85bbda7b4a728b7.png)](https://www.smashingmagazine.com/wp-content/uploads/2017/05/13-diagram_compare04-large-opt.png)
 
