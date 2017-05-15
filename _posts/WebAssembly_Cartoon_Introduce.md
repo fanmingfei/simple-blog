@@ -5,7 +5,7 @@ category: JavaScript
 date: 2017-05-14 23:59:59
 ---
 
-# 用漫画介绍 WebAssembly
+# 图说 WebAssembly
 
 > 本文转载自：[众成翻译](http://www.zcfy.cc)
 
