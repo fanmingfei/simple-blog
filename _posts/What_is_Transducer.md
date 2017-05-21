@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "什么是 Transducer"
+title: "[译]什么是 Transducer"
 category: JavaScript
 date: 2017-05-21 14:24:00
 ---
