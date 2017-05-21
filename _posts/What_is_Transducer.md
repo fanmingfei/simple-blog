@@ -543,5 +543,5 @@ Transducer的概念来自[Clojure](https://clojure.org/reference/transducers)编
 
 ### 笔记
 
-1.  `（acc，val）=>（acc.push（val），acc）`在语义是令人赏心悦目的，但是不经常逗号操作符会有些不习惯，最好避免在生产代码中。[↩](#fnref:comma)
+1.  `(val, acc)=>(acc.push(val), acc)`在语义是令人赏心悦目的，但是不经常逗号操作符会有些不习惯，最好避免在生产代码中。[↩](#fnref:comma)
 2.  在一些编程社区中，对于字符有很强的保护意识，所以tarnsformer缩写为xform甚至xf。如果你看到像`(xf,reduce,seed,coll)`或 `xf((val,acc) => acc) -> (val,acc) => acc`不要惊讶。这篇文章没有这么写，我们在生产代码中也没有像xf或xform这样的名称。[↩](#fnref:xf)
