@@ -1,3 +1,10 @@
+---
+layout: post
+title: "什么是 Transducer"
+category: JavaScript
+date: 2017-05-21 14:24:00
+---
+
 # 什么是 Transducer
 
 > 本文转载自：[众成翻译](http://www.zcfy.cc)
