@@ -27,7 +27,7 @@ date: 2017-05-21 14:24:00
 
 ### reducers
 
-**reducer**函数接收一个集合和一个值，它将这个值加入到集合中。比如，如果 `[1,2,3]` 是一个 `集合`，`4` 是将要被添加到集合的一个值， 执行 `(acc, val) => acc.concat([val])`通过这个reducer将返回`[1,2,3,4]`：
+**reducer**函数接收一个累积值（译者注：一个通过迭代后累积成的变量）和一个值，它将这个值加入到累积值中。比如，如果 `[1,2,3]` 是一个 `累积值`，`4` 是将要被添加到累积值的一个值， 执行 `(acc, val) => acc.concat([val])`通过这个reducer将返回`[1,2,3,4]`：
 
     const acc = [1, 2, 3];
     const val = 4;
@@ -38,7 +38,7 @@ date: 2017-05-21 14:24:00
 
 `(acc, val) => acc.concat([val])`是一个 reducer，它可以将一个数组和一个值连接。
 
-`(acc, val) => acc.add(val)`也是一个同样的 reducer，`.add`是将一个值插入到这个集合后面。它适用于任何有`.add`事件，并且执行`.add`事件后返回自身的对象，比如 Set.prototype.add：
+`(acc, val) => acc.add(val)`也是一个同样的 reducer，`.add`是将一个值插入到这个累积值数组的后面。它适用于任何有`.add`事件，并且执行`.add`事件后返回自身的对象，比如 Set.prototype.add：
 
     const acc = new Set([1, 2, 3]);
     const val = 4;
@@ -120,7 +120,7 @@ date: 2017-05-21 14:24:00
     reduceWith(sumOf, 0, [1, 2, 3])
       //=> 6
 
-我们可以编写一个reducer，它将可迭代的数据（如数组）通过reduce转变为另一种类型（如数字）。
+我们可以编写一个reducer，它将可迭代的数据（如数组）通过reduce转变为另一种类型（如数字）。（译者注：像这一个reducer，累计值其实是传入`reduceWith`的可迭代数据相加所得的数，reducer的第一个参数并非必须是一个数组）
 
 * * *
 
@@ -350,7 +350,7 @@ JavaScript编写以函数为参数的函数也很容易。
 
     `reduceWith(squaresOfTheOddNumbers(sumOf), 0, one2ten)`
 
-可以发现，执行这个方法时的参数分成了四个元素：一个reducer转换器（或许是一个转换器组合），一个seed，一个可迭代数据。如果我们把它们分为单独的参数，我们得到：.([2](#fn:xf))
+可以发现，执行这个方法时的参数分成了四个元素：一个reducer转换器（或许是一个转换器组合），一个seed，一个可迭代数据。如果我们把它们分为单独的参数，我们得到：[2](#fn:xf)
 
     const transduce = (transformer, reducer, seed, iterable) => {
       const transformedReducer = transformer(reducer);
@@ -543,5 +543,5 @@ Transducer的概念来自[Clojure](https://clojure.org/reference/transducers)编
 
 ### 笔记
 
-1.  `(val, acc)=>(acc.push(val), acc)`在语义是令人赏心悦目的，但是不经常逗号操作符会有些不习惯，最好避免在生产代码中。[↩](#fnref:comma)
+1.  `(acc, val) => (acc.push(val), acc)` 在语义是令人赏心悦目的，但是不经常使用逗号操作符会有些不习惯，最好避免在生产代码中。[↩](#fnref:comma)
 2.  在一些编程社区中，对于字符有很强的保护意识，所以tarnsformer缩写为xform甚至xf。如果你看到像`(xf,reduce,seed,coll)`或 `xf((val,acc) => acc) -> (val,acc) => acc`不要惊讶。这篇文章没有这么写，我们在生产代码中也没有像xf或xform这样的名称。[↩](#fnref:xf)
