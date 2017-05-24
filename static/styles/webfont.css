@@ -19,7 +19,9 @@
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 1em;
 }
+
 
 .icon-wechat:before {
     content: "\e900";
