@@ -8,8 +8,11 @@ date: 2017-05-31 14:40:00
 # Chromium Blog：再见 PNaCI，你好 WebAssembly！
 
 > 本文转载自：[众成翻译](http://www.zcfy.cc)
+
 > 译者：[明非](http://www.zcfy.cc/@edire)
+
 > 链接：[http://www.zcfy.cc/article/2984](http://www.zcfy.cc/article/2984)
+
 > 原文：[https://blog.chromium.org/2017/05/goodbye-pnacl-hello-webassembly.html](https://blog.chromium.org/2017/05/goodbye-pnacl-hello-webassembly.html)
 
 再见 PNaCI，你好 WebAssembly！
