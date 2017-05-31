@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[译]图说 WebAssembly"
-category: JavaScript
+category: WebAssembly
 date: 2017-05-14 23:59:59
 ---
 

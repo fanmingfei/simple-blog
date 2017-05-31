@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "WebAssembly 大杂烩"
-category: JavaScript
+category: WebAssembly
 date: 2017-05-16 23:13:59
 ---
 
