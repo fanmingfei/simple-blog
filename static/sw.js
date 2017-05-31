@@ -6,10 +6,10 @@ this.addEventListener('install', function(event) {
                 '/static/images/avatar.jpeg',
                 '/static/styles/reset.css',
                 '/static/styles/webfont.css',
-                '/static/fonts/webfont.eot',
-                '/static/fonts/webfont.svg',
-                '/static/fonts/webfont.ttf',
-                '/static/fonts/webfont.woff'
+                '/static/fonts/icomoon.eot',
+                '/static/fonts/icomoon.svg',
+                '/static/fonts/icomoon.ttf',
+                '/static/fonts/icomoon.woff'
             ]);
         })
     );
