@@ -10,5 +10,8 @@
     },
     "category": {
         "template": "category"
+    },
+    "links": {
+        "template": "links"
     }
 }

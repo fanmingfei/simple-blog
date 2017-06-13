@@ -127,6 +127,15 @@ function renderCategory() {
 
 }
 
+
+function renderFriendLinks() {
+    var tplVar = {title: '友情链接', links: config.links};
+    var tpl = getTpl(config.entry.links.template);
+    var filepath = path.resolve(__dirname, '../', config.directory.publish, 'links.html');
+    makePage(tplVar, tpl, filepath);
+}
+
+
 function makePage(tplVar, tpl, filepath) {
     var defaultTplVar = {
         website: config.website,
@@ -147,4 +156,5 @@ module.exports = function() {
     renderIndex();
     renderArchives();
     renderCategory();
+    renderFriendLinks();
 }

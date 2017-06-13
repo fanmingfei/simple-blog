@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <include src="./head.html" />
+</head>
+
+<body>
+    <include src="./nav.html" />
+    <main>
+        <article>
+            <h1 class="title">友情链接</h1>
+            <div class="content">
+                <ul>
+                    <%links.forEach((link)=>{%>
+                        <li>
+                            <a href="<%=link.url%>">
+                                <%-link.name%>
+                            </a>
+                        </li>
+                    <%})%>
+                </ul>
+            </div>
+        </article>
+    </main>
+    <include src="./footer.html" />
+    <include src="./foot.html" />
+</body>
+
+</html>
