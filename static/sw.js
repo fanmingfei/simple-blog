@@ -5,6 +5,7 @@ this.addEventListener('install', function(event) {
             return cache.addAll([
                 '/static/images/avatar.jpeg',
                 '/static/styles/reset.css',
+                '/static/styles/main.css',
                 '/static/styles/webfont.css',
                 '/static/fonts/icomoon.eot',
                 '/static/fonts/icomoon.svg',
