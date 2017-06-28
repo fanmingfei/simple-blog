@@ -61,6 +61,7 @@ a:hover {
     color: #ddd;
 }
 
+
 .aside .other {
     margin-top: 30px;
     display: flex;
@@ -229,6 +230,9 @@ main article pre {
     }
     nav.aside .nav li a {
         padding: 0 10px;
+    }
+    nav.aside .nav li:last-child {
+        display:none;
     }
     nav.aside .other {
         display: none;
