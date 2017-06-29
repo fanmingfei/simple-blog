@@ -43,8 +43,10 @@ npm install antd-mobile babel-plugin-import --save # 安装依赖
 }
 ```
 
-
 这样，我们就可以在项目里面使用 Ant Design 来制作界面了。
+
+
+接下来，我们正式开始写代码了。
 
 ## index.js
 
@@ -68,9 +70,9 @@ app.router(require('./router'));
 app.start('#root');
 ```
 
-这是默认的 `index.js`，是一个项目的入口文件，默认 2 和 3 都是被注释掉的。2 我们暂时用不到，3 是引入我们开始创建的Model的，4 是引入我们的路由文件的。
+这是默认的 `index.js`，是一个项目的入口文件，默认 2 和 3 暂时是被注释掉的。2 我们暂时用不到，3 是引入我们开始创建的Model的，4 是引入我们的路由文件的。
 
-所以我们的这个 `index.js` 文件将会变成：
+我们引入我们创建的`models`：
 
 ```
 import dva from 'dva';
@@ -125,6 +127,40 @@ function RouterConfig({ history }) {
 
 export default RouterConfig;
 ```
+
+在路由配置中，`<Router>` 代表路由的根节点，在 `<Router>` 内使用 `<Router>` 来定义路由，`path` 属性定义路由的路径，也就是url，`component` 属性来定义访问这个路由时调用的组件。
+
+分析上面的代码：
+
+```
+import React from 'react';
+import { Router, Route } from 'dva/router';
+```
+引入了必要的 React，Router和Route。
+
+```
+import IndexPage from './routes/Index';
+import IntroPage from './routes/Intro';
+import ListPage from './routes/List';
+```
+引入了3个入口文件，入口文件也是一个组件。
+
+```
+<Route path="/" component={IndexPage} />
+```
+
+当我们访问 `/` 时，页面会显示 IndexPage 组件。
+
+```
+<Route path="/list">
+    {/* 文章列表页路由，第一个参数是文章类型，第二个参数是当前第几页 */}
+    <Route path=":type/:page" component={IntroPage} />
+</Route>
+```
+
+当我们访问 `/list/flea-market/2` 时，我们加载了 List 这个组件，但是，List组件不会获取到我们URL中的内容，我们需要通过其他方式获取分析我们的URL，让 List 组件来显示正确的内容，后面会讲到。
+
+
 
 未完待续……
 
