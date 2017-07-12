@@ -99,6 +99,8 @@ app.router(require('./router'));
 app.start('#root');
 ```
 
+## router.js
+
 我们看一下我们的路由文件 `router.js` 是怎么写的
 
 ```
@@ -158,8 +160,9 @@ import ListPage from './routes/List';
 </Route>
 ```
 
-当我们访问 `/list/flea-market/2` 时，我们加载了 List 这个组件，但是，List组件不会获取到我们URL中的内容，我们需要通过其他方式获取分析我们的URL，让 List 组件来显示正确的内容，后面会讲到。
+当我们访问 `/list/flea-market/2` 时，我们加载了 List 这个组件，但是，List 组件不会获取我们URL中的内容（参数），我们需要通过其他方式获取分析我们的URL，让 List 组件来显示正确的内容，后面会讲到。
 
+## routes
 
 
 未完待续……

@@ -44,7 +44,7 @@ dva init
 
 ## 代码目录结构
 
-- `mocks` Mock 数据存放的位置
+- `mock` Mock 数据存放的位置
 - `public` 静态页面存放的位置
 - `src` 代码目录
     - `assets` 资源目录，一些通用的 css/images
@@ -55,6 +55,9 @@ dva init
     - `utils` 存放一些工具方法或类
 - `.roadhogrc` roadhog的配置文件。
 - `.roadhogrc.mock.js` 管理 Mock 数据的地方
+
+
+
 
 拿我大学在的社团鲁大学生网的最新版 Android App 举例
 
@@ -147,7 +150,7 @@ Component 这边主要是根据业务来提供一些展示数据用的组件。
 
 我们把强业务相关的放在 `bussiness` 文件夹内，通用的放在 `common` 里。
 
-`flea-market` 里的 Arc.js/List.js 分别代表文章页和列表页，其它文章类 component 也类似，`less` 文件分别是它们的样式文件。当然，common目录下的模块目录内也会有对应的文件，到时候我们编辑他们的时候在介绍。
+`flea-market` 里的 Arc.js/List.js 分别代表文章页和列表页，其它文章类 component 也类似，`less` 文件分别是它们的样式文件。当然，common 下的目录内也会有对应的组件文件。
 
 ## Service
 
@@ -170,4 +173,3 @@ Component 这边主要是根据业务来提供一些展示数据用的组件。
 
 这篇文章主要讲了目录结构的和组件的创建，还没有叙述如何连接使用，下篇文章将会连接 Route/Component/Model。
 
-> 原文地址：https://fanmingfei.com/posts/Build_Small_Project_by_Dva_1.html
