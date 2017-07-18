@@ -132,7 +132,7 @@ date: 2017-07-17 18:40:00
 
 为了检查所有的事情都符合我们的预期，我们可以运行测试！通过 vue-cli 创建的项目，我们可以简单的使用`npm run unit`来运行`cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run`。
 
-    `npm run unit`
+    npm run unit
 
 如果测试都通过了，将会有一个绿色的列表来显示测试报告，让你了解测试都覆盖了哪些代码。
 
@@ -242,7 +242,7 @@ date: 2017-07-17 18:40:00
 
 希望你读这些代码的时候思路能够清晰，不过它对于刚刚开始接触VueJs单元测试的人来说可读性并不是很高。有一个VueJS实用程序库，它将一些复杂的代码进行了封装。如果想使用它，可以在项目的根目录下输入以下命令安装。
 
-    `npm install avoriaz`
+    npm install avoriaz
 
 下面这个测试实际上和上面测试相同，只不过写法上有些不同。我们使用了`mount()`法来安装Vue组件，使用`find()`获取按钮，使用`dispatch()`来触发点击。
 
