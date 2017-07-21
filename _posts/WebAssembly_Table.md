@@ -5,12 +5,11 @@ category: WebAssembly
 date: 2017-07-21 23:54:00
 ---
 
+这是系列文章：
 
-1. [使用 JavaScript 创建一个 WebAssembly 模块的实例](https://fanmingfei.com/posts/WebAssembly_Instance.html)。
-
-2. [WebAssembly 中的 Memory](https://fanmingfei.com/posts/WebAssembly_Memory.html)
-
-3. [什么是 WebAssembly table？](https://fanmingfei.com/posts/WebAssembly_Table.html)
+*[使用 JavaScript 创建一个 WebAssembly 模块的实例](https://fanmingfei.com/posts/WebAssembly_Instance.html)。
+*[WebAssembly 中的 Memory](https://fanmingfei.com/posts/WebAssembly_Memory.html)
+*[什么是 WebAssembly table？](https://fanmingfei.com/posts/WebAssembly_Table.html)
 
 ***
 
