@@ -5,6 +5,8 @@ category: WebAssembly
 date: 2017-07-21 23:54:00
 ---
 
+> 英文原文：[https://hacks.mozilla.org/2017/07/webassembly-table-imports-what-are-they/](https://hacks.mozilla.org/2017/07/webassembly-table-imports-what-are-they/)
+
 这是系列文章：
 
 * [使用 JavaScript 创建一个 WebAssembly 模块的实例](https://fanmingfei.com/posts/WebAssembly_Instance.html)。

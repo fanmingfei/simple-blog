@@ -5,6 +5,7 @@ category: WebAssembly
 date: 2017-07-21 23:54:00
 ---
 
+> 英文原文：[https://hacks.mozilla.org/2017/07/memory-in-webassembly-and-why-its-safer-than-you-think/](https://hacks.mozilla.org/2017/07/memory-in-webassembly-and-why-its-safer-than-you-think/)
 
 这是系列文章：
 
@@ -92,7 +93,7 @@ ArrayBuffer 提供了边界。WebAssembly 模块可以直接管理的内存是�
 
 [![WebAssembly trying to store out of bounds and being rejected](http://p0.qhimg.com/t01697df6c15636743d.png)](https://2r4s9p1yi1fa2jd7j43zph8r-wpengine.netdna-ssl.com/files/2017/07/02-08.png)
 
-所以这就是 memory 相关的内容。在下一篇文章中，我们将看研究一些关于安全性的其它类型的 import 数据：[table import](https://hacks.mozilla.org/2017/07/webassembly-table-imports-what-are-they/)。
+所以这就是 memory 相关的内容。在下一篇文章中，我们将看研究一些关于安全性的其它类型的 import 数据：[table import](https://fanmingfei.com/posts/WebAssembly_Table.html)。
 
 ## About
 

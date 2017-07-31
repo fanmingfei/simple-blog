@@ -5,6 +5,7 @@ category: WebAssembly
 date: 2017-07-20 23:54:00
 ---
 
+> 英文原文：[https://hacks.mozilla.org/2017/07/creating-a-webassembly-module-instance-with-javascript/](https://hacks.mozilla.org/2017/07/creating-a-webassembly-module-instance-with-javascript/)
 
 这是系列文章：
 
@@ -106,7 +107,7 @@ WebAssembly是[在Web上运行代码的新途径](https://www.w3ctech.com/topics
 
 [![WebAssembly robot is booted](http://p0.qhimg.com/t01fa40a366ec5b1515.png)](https://2r4s9p1yi1fa2jd7j43zph8r-wpengine.netdna-ssl.com/files/2017/07/1-09.png)
 
-下一篇将会深入去讲解[memory import](https://hacks.mozilla.org/2017/07/memory-in-webassembly-and-why-its-safer-than-you-think/)和[table import](https://hacks.mozilla.org/2017/07/webassembly-table-imports-what-are-they/)。
+下一篇将会深入去讲解[memory import](https://hacks.mozilla.org/2017/07/memory-in-webassembly-and-why-its-safer-than-you-think/)和[table import](https://fanmingfei.com/posts/WebAssembly_Memory.html)。
 
 ## About
 
