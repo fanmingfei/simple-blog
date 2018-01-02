@@ -3,6 +3,7 @@
     "websitePath": "/",
     "domain": "https://fanmingfei.com",
     "author": "fanmingfei",
-    "description": "未来前端",
+    "keywords": "范明非,明非,前端范明非",
+    "description": "范明非的Blog",
     "rss": "rss.xml"
 }

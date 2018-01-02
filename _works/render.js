@@ -29,13 +29,12 @@ function renderIndex() {
 function renderPosts() {
     var posts = database.getAll();
     var tplVar = {
-        posts,
-        website: config.website,
+        posts
     }
 
     posts.forEach(post => {
         tplVar.post = post;
-        tplVar.title = post.title;
+        tplVar.title = post.title + ' - ' + config.website.title;
         var tpl = getTpl(config.entry.post.template);
         var file = path.parse(post.filepath);
         var filepath = path.resolve(__dirname, '../', config.directory.publish, config.publishDirectory.posts, file.name + '.html');
