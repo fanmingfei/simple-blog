@@ -1,12 +1,5 @@
----
-layout: post
-title: "前端动画/游戏开发 requestAnimationFrame 之 锁帧"
-date: 2018-03-23 02:00:00
-category: JavaScript
----
-
 ## 前言
-这里就不介绍 requestAnimationRequest 的使用方法了，具体可以参考 [requestAnimationFrame | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame)
+这里就不介绍 requestAnimationFrame 的使用方法了，具体可以参考 [requestAnimationFrame | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame)
 在日常的动画项目中，我们需要使用 `requestAnimationFrame` 实现持续顺畅的动画效果，如果是简单动画还好，涉及到游戏、重逻辑的情况，可能一帧的时间不能支持逻辑运行，造成帧率忽高忽低，渲染卡顿的情况。这种情况，在我们业务逻辑优化以后，我多数考虑使用锁帧进行处理。
 
 ## 锁帧
@@ -28,7 +21,7 @@ const logic = (time)=>{
 requestAnimationFrame(logic)
 ```
 
-回调函数中输出了当前的真是的帧率。
+回调函数中输出了当前的真实帧率。
 
 设置 fps 的值为锁帧的帧率，我们可以输入几个值观察真实帧率，真实帧率我已经忽略了运行少量代码导致的性能损耗。
 
@@ -47,4 +40,4 @@ requestAnimationFrame(logic)
 比如我们设置帧率是50，那么帧周期是 1000/50=20ms，`requestAnimationFrame` 额定帧周期是 1000/60=16.666…ms，第二帧开始的时间是16.66…ms，不会执行业务逻辑，等到第三帧，时间过去了33.33…ms，满足锁帧规则，开始执行业务代码，当前距离上一次执行业务逻辑已经过了33.33…ms，所以帧周期是33.33…ms，所以即便我们设置帧率为50帧，其实际帧率也会是30帧。
 
 ## 其他
-`requestAnimationFrame` 的回调函数的参数的时间是当前帧开始的时间，有时候我们使用 `performance.now()` 来获取当前时间进行，其实是获取的当前时间，通过这个时间进行游戏状态的更新，所以每一次取到的时间间隔可能不同，导致游戏可能并不是真正想要的状态。通过`requestAnimationFrame`回调函数参数拿到的是当前帧开始的时间，通过计算拿到游戏状态，是当前帧开始时候的游戏状态，保证帧率的情况下，游戏状态一定是准确的。
+`requestAnimationFrame` 回调函数的参数是当前帧开始的时间，有时候我们使用 `performance.now()` 来获取当前时间进行，其实是获取的当前时间，通过这个时间进行游戏状态的更新，所以每一次取到的时间间隔可能不同，导致游戏可能并不是真正想要的状态。通过`requestAnimationFrame`回调函数参数拿到的是当前帧开始的时间，通过计算拿到游戏状态，是当前帧开始时候的游戏状态，保证帧率的情况下，游戏状态一定是准确的。
