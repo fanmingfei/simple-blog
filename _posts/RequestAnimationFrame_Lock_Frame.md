@@ -1,3 +1,10 @@
+---
+layout: post
+title: "前端动画/游戏开发 requestAnimationFrame 之 锁帧"
+category: JavaScript
+date: 2018-04-23 03:00:00
+---
+
 ## 前言
 这里就不介绍 requestAnimationFrame 的使用方法了，具体可以参考 [requestAnimationFrame | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame)
 在日常的动画项目中，我们需要使用 `requestAnimationFrame` 实现持续顺畅的动画效果，如果是简单动画还好，涉及到游戏、重逻辑的情况，可能一帧的时间不能支持逻辑运行，造成帧率忽高忽低，渲染卡顿的情况。这种情况，在我们业务逻辑优化以后，我多数考虑使用锁帧进行处理。
