@@ -2,7 +2,7 @@
 layout: post
 title: "前端动画/游戏开发 requestAnimationFrame 之 锁帧"
 category: JavaScript
-date: 2018-04-23 03:00:00
+date: 2018-03-23 03:00:00
 ---
 
 ## 前言

@@ -2,7 +2,7 @@
 layout: post
 title: "CSS 行高"
 category: CSS
-date: 2018-04-24 15:00:00
+date: 2018-03-24 15:00:00
 ---
 
 `line-height` 属性，可以用在块级元素上，顾名思义，就是 **每一行的高度**。
