@@ -8,6 +8,22 @@
             console.log('sw error:', error);
         });
     }
+
+    (() => {
+        const title = document.title
+        let timmer
+        document.addEventListener('visibilitychange', () => {
+            clearTimeout(timmer)
+            if (document.hidden) {
+                document.title = '喔唷，崩溃啦!'
+            } else {
+                document.title = '哎呦，又好啦!'
+                timmer = setTimeout(() => {
+                    document.title = title
+                }, 1000)
+            }
+        })
+    })()
 </script>
 <div style="display: none">
     <script src="https://s95.cnzz.com/z_stat.php?id=1261742601&web_id=1261742601" language="JavaScript"></script>
