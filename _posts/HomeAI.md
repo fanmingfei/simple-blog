@@ -12,11 +12,11 @@ HOME AI 长远目标构建具有现实意义的虚拟世界。2年目标通过�
 如果你有意向，可以将简历发至：mingfei.fmf@alibaba-inc.com（坐标：杭州、北京均有）
 
 
-[-3d引擎技术专家](https://job.alibaba.com/zhaopin/position_detail.htm?positionId=51086)
+[3d引擎技术专家](https://job.alibaba.com/zhaopin/position_detail.htm?positionId=51086)
 
 [资深客户端开发工程师](https://job.alibaba.com/zhaopin/position_detail.htm?positionId=51081)
 
-[ 3D视觉算法](https://job.alibaba.com/zhaopin/position_detail.htm?positionId=51522)
+[3D视觉算法](https://job.alibaba.com/zhaopin/position_detail.htm?positionId=51522)
 
 [前端开发专家-图形学方向](https://job.alibaba.com/zhaopin/position_detail.htm?positionId=51082)
 
