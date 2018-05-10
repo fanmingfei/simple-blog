@@ -11,6 +11,7 @@ HOME AI 长远目标构建具有现实意义的虚拟世界。2年目标通过�
 
 如果你有意向，可以将简历发至：mingfei.fmf@alibaba-inc.com（坐标：杭州、北京均有）
 
+![](http://p1.qhimg.com/t015be499a4aa556b55.jpg)
 
 [智能场景事业部-HomeAI-3d引擎技术专家](https://job.alibaba.com/zhaopin/position_detail.htm?positionId=51086)
 
