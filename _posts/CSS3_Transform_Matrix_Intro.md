@@ -1,10 +1,3 @@
----
-layout: post
-title: "大学没学过数学也要理解 CSS3 transform 中的 matrix"
-category: CSS
-date: 2018-05-23 14:05:00
----
-
 ## 前言
 CSS3 中使用 transform 可以对元素进行变换。其中包含：位移、旋转、偏移、缩放。
 transform 可以使用 translate/rotate/skew/scale 的方式来控制元素变换，也可以使用 matrix 的方式来控制元素变换。
@@ -37,7 +30,7 @@ transform 可以使用 translate/rotate/skew/scale 的方式来控制元素变�
 }
 ```
 
-[查看demo](https://codepen.io/fanmingfei/pen/pVYdpO)
+[查看demo](//codepen.io/fanmingfei/pen/pVYdpO)
 
 Matrix 的中文是矩阵，是一个数学术语，在计算机科学中，会用矩阵来对象量进行变换，在 CSS3 的 transform 属性中，可以使用矩阵对图像进行变换。
 
@@ -48,13 +41,13 @@ Matrix 的中文是矩阵，是一个数学术语，在计算机科学中，会�
 
 阵型中的每一个个体对整体的都会产生影响。比如打王者荣耀射手时候，射手应该猥琐在一个位置输出，站错位置，输掉整个游戏。
 
-![](http://gw.alicdn.com/mt/TB1AfLokiCYBuNkHFCcXXcHtVXa-1200-800.jpeg)
+![](//gw.alicdn.com/mt/TB1AfLokiCYBuNkHFCcXXcHtVXa-1200-800.jpeg)
 
 那，其实矩阵就是一些列的数字按照矩形排列。
 
 在数学中，矩阵用方括号包裹起来。
 
-![](http://gw.alicdn.com/mt/TB1dvt3sL5TBuNjSspmXXaDRVXa-1296-700.png)
+![](//gw.alicdn.com/mt/TB1dvt3sL5TBuNjSspmXXaDRVXa-1296-700.png)
 
 上图就是一个矩阵。
 
@@ -70,7 +63,7 @@ selector {
 }
 ```
 
-![](http://gw.alicdn.com/mt/TB14SYUsTJYBeNjy1zeXXahzVXa-997-700.png)
+![](//gw.alicdn.com/mt/TB14SYUsTJYBeNjy1zeXXahzVXa-997-700.png)
 
 2D 的转换是由一个 3*3 的矩阵表示的，前两行代表转换的值，分别是 a b c d e f，要注意是竖着排的，第一行代表 x 轴发生的变化，第二行代表 y 轴发生的变化，第三行代表 z 轴发生的变化，因为这里是 2D 不涉及 z 轴，所以这里是 0 0 1。
 
@@ -78,7 +71,7 @@ selector {
 ## 假设一个问题
 
 创建一个宽高为 200px 的div，div 里面有一个红色的点，位置是`{x:181px y:50px}`。
-![](http://gw.alicdn.com/mt/TB1BnpysHuWBuNjSszgXXb8jVXa-409-409.png)
+![](//gw.alicdn.com/mt/TB1BnpysHuWBuNjSszgXXb8jVXa-409-409.png)
 
 倘若将这个div 向右平移 10px，x 轴向下平移 20px，旋转37°，x轴缩放 1.5 倍，y 轴缩放 2 倍：
 
@@ -103,7 +96,7 @@ d=y
 
 transform: matrix(1.5, <del>0, 0,</del> 2, <del>0, 0</del>);
 
-![](http://gw.alicdn.com/mt/TB1t764sH1YBuNjSszhXXcUsFXa-1249-700.png)
+![](//gw.alicdn.com/mt/TB1t764sH1YBuNjSszhXXcUsFXa-1249-700.png)
 
 如果一个没有元素没有被缩放，默认a=1 d=1。
 
@@ -217,11 +210,11 @@ transform: matrix(<del>1,</del> 0.577, 0.364, <del> 1, 0, 0</del>)
 
 这里我用小写字母代表第一个矩阵中的值，大写字母代表第二个矩阵里的值
 
-![](http://gw.alicdn.com/mt/TB1qQgusHSYBuNjSspfXXcZCpXa-6355-700.png)
+![](//gw.alicdn.com/mt/TB1ukR1tntYBeNjy1XdXXXXyVXa-6355-700.png)
 
 将我们的已经得到的矩阵带入到公式
 
-![](http://gw.alicdn.com/mt/TB1rIL4sFuWBuNjSspnXXX1NVXa-8124-2014.png)
+![](//gw.alicdn.com/mt/TB1rIL4sFuWBuNjSspnXXX1NVXa-8124-2014.png)
 
 得出：
 
@@ -242,7 +235,7 @@ transform: translate(10px, 20px) rotate(37deg) scale(1.5, 2);
 
 x 平移 10px，y 平移 20px，所以 e=10，f=20。
 
-![](http://gw.alicdn.com/mt/TB1VIL5sKuSBuNjSsplXXbe8pXa-1249-700.png)
+![](//gw.alicdn.com/mt/TB1VIL5sKuSBuNjSsplXXbe8pXa-1249-700.png)
 
 ### rotate(37deg)
 
@@ -256,13 +249,13 @@ cos37° ≈ 0.8
 
 a=0.8，b=0.6，c=-0.6，d=0.8
 
-![](http://gw.alicdn.com/mt/TB1d27LsUR1BeNjy0FmXXb0wVXa-1249-700.png)
+![](//gw.alicdn.com/mt/TB1d27LsUR1BeNjy0FmXXb0wVXa-1249-700.png)
 
 ### scale(1.5, 2)
 
 x 轴缩放 1.5，y 轴缩放 2，所以 a=1.5，d=2
 
-![](http://gw.alicdn.com/mt/TB1vh9UkyCYBuNkSnaVXXcMsVXa-1249-700.png)
+![](//gw.alicdn.com/mt/TB1vh9UkyCYBuNkSnaVXXcMsVXa-1249-700.png)
 
 ### 结合
 
@@ -270,20 +263,20 @@ transform: translate(10px, 20px) rotate(37deg) scale(1.5, 2);
 
 我们使用  位移矩阵 * 旋转矩阵 * 缩放矩阵（根据transform中的变换类型书写的顺序）
 
-可以使用[矩阵计算器](https://zh.numberempire.com/matrixbinarycalculator.php)进行计算
+可以使用[矩阵计算器](//zh.numberempire.com/matrixbinarycalculator.php)进行计算
 
 从左往右依次计算
 
-![](http://gw.alicdn.com/mt/TB1imHdsY1YBuNjSszeXXablFXa-6549-727.png)
+![](//gw.alicdn.com/mt/TB1imHdsY1YBuNjSszeXXablFXa-6549-727.png)
 
 
 所以最终得到矩阵
 
-![](http://gw.alicdn.com/mt/TB1emrqkDdYBeNkSmLyXXXfnVXa-997-700.png)
+![](//gw.alicdn.com/mt/TB1emrqkDdYBeNkSmLyXXXfnVXa-997-700.png)
 
 matrix(1.2, 0.9, -1.2 1.6, 10, 20)
 
-[验证一下](https://codepen.io/fanmingfei/pen/derzxK)
+[验证一下](//codepen.io/fanmingfei/pen/derzxK)
 
 transform: matrix(1.2, 0.9, -1.2 1.6, 10, 20)
 
@@ -299,15 +292,15 @@ transform: translate(10px, 20px) rotate(37deg) scale(1.5, 2);
 
 我们用之前得出的变换矩阵去乘以这一个坐标组成的3*1（三排一列）矩阵。
 
-![](http://gw.alicdn.com/mt/TB1WBO4sHSYBuNjSspfXXcZCpXa-1861-700.png)
+![](//gw.alicdn.com/mt/TB1WBO4sHSYBuNjSspfXXcZCpXa-1861-700.png)
 
 上面已经介绍过如何进行矩阵乘法了，这里在介绍一遍
 
-![](http://gw.alicdn.com/mt/TB1OSJVsHSYBuNjSspiXXXNzpXa-1861-700.png)
+![](//gw.alicdn.com/mt/TB1OSJVsHSYBuNjSspiXXXNzpXa-1861-700.png)
 
 上图中左右两个矩阵颜色相同的位置相乘后相加，每一行都进行这样的计算：
 
-![](http://gw.alicdn.com/mt/TB1FfnosGmWBuNjy1XaXXXCbXXa-3812-700.png)
+![](//gw.alicdn.com/mt/TB1FfnosGmWBuNjy1XaXXXCbXXa-3812-700.png)
 
 得到一个3*1的矩阵，第一行是转换后的 x 值，第二行是转换后的 y 值，第三行是转换后的 z 值（2d不考虑z值）。
 
@@ -317,11 +310,11 @@ transform: translate(10px, 20px) rotate(37deg) scale(1.5, 2);
 
 我们把坐标写成矩阵的形式，设置 z 轴是1：
 
-![](http://gw.alicdn.com/mt/TB1BdIVsN9YBuNjy0FfXXXIsVXa-519-700.png)
+![](//gw.alicdn.com/mt/TB1BdIVsN9YBuNjy0FfXXXIsVXa-519-700.png)
 
 然后进行乘法计算：
 
-![](http://gw.alicdn.com/mt/TB11DLDsMmTBuNjy1XbXXaMrVXa-4854-727.png)
+![](//gw.alicdn.com/mt/TB11DLDsMmTBuNjy1XbXXaMrVXa-4854-727.png)
 
 通过我们计算出来的矩阵变换得到新的位置(46, 172)
 
@@ -334,10 +327,10 @@ transform: translate(10px, 20px) rotate(37deg) scale(1.5, 2);
 
 转换前：
 
-![](http://gw.alicdn.com/mt/TB18DKgsWmWBuNjy1XaXXXCbXXa-706-796.png)
+![](//gw.alicdn.com/mt/TB18DKgsWmWBuNjy1XaXXXCbXXa-706-796.png)
 
 转换后：
-![](http://gw.alicdn.com/mt/TB1Zcxds29TBuNjy1zbXXXpepXa-982-1023.png)
+![](//gw.alicdn.com/mt/TB1Zcxds29TBuNjy1zbXXXpepXa-982-1023.png)
 
 根据题目我们知道，这个点相对于绿色div左上角的坐标是(181, 50)
 绿色div的宽高为200
@@ -345,7 +338,7 @@ transform: translate(10px, 20px) rotate(37deg) scale(1.5, 2);
 
 将坐标代入公式进行计算：
 
-![](http://gw.alicdn.com/mt/TB10o_gksuYBuNkSmRyXXcA3pXa-4854-727.png)
+![](//gw.alicdn.com/mt/TB10o_gksuYBuNkSmRyXXcA3pXa-4854-727.png)
 
 得到坐标约为(167, 13)
 
