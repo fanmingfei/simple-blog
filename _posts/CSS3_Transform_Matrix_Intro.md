@@ -1,3 +1,9 @@
+---
+layout: post
+title: "大学没学过数学也要理解 CSS3 transform 中的 matrix"
+category: CSS
+date: 2018-05-23 14:05:00
+---
 ## 前言
 CSS3 中使用 transform 可以对元素进行变换。其中包含：位移、旋转、偏移、缩放。
 transform 可以使用 translate/rotate/skew/scale 的方式来控制元素变换，也可以使用 matrix 的方式来控制元素变换。
