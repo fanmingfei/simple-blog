@@ -216,7 +216,7 @@ transform: matrix(<del>1,</del> 0.577, 0.364, <del> 1, 0, 0</del>)
 
 这里我用小写字母代表第一个矩阵中的值，大写字母代表第二个矩阵里的值
 
-![](//gw.alicdn.com/mt/TB1ukR1tntYBeNjy1XdXXXXyVXa-6355-700.png)
+![](//gw.alicdn.com/mt/TB1w50ktL5TBuNjSspcXXbnGFXa-6355-700.png)
 
 将我们的已经得到的矩阵带入到公式
 
