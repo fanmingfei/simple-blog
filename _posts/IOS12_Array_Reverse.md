@@ -13,7 +13,7 @@ date: 2018-09-19 04:00:00
 
 [iOS 12 的 safari 有哪些变化吗？今天发现了一个 javascript 的问题 - V2EX](https://www.v2ex.com/t/490590)
 
-先来体验一下：
+先来使用 IOS 12 体验一下：
 
 [这是原网页](https://fanmingfei.github.io/array-reverse-ios12/origin.html)
 
