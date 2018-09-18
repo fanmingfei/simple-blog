@@ -8,12 +8,15 @@ date: 2018-09-19 04:00:00
 喜气洋洋，被安利使用iOS12，红红火火，更新最新版本。
 
 网络上已经有人遇到 iOS 数组相关的一个Bug，似乎会酿成整个互联网风波。
+
 [Array state will be cached in iOS 12 Safari, is bug or feature? -- stackoverflow](https://stackoverflow.com/questions/52390368/array-state-will-be-cached-in-ios-12-safari-is-bug-or-feature/52392901#52392901)
 
 [iOS 12 的 safari 有哪些变化吗？今天发现了一个 javascript 的问题 - V2EX](https://www.v2ex.com/t/490590)
 
 先来体验一下：
+
 [这是原网页](https://fanmingfei.github.io/array-reverse-ios12/origin.html)
+
 [这是修复后的](https://fanmingfei.github.io/array-reverse-ios12/fixed.html)
 
 点击网页上方的 Click Refresh，可以看到，网页刷新后，原网页中，数组的顺序在第二次访问网页的时候，变成了倒序，即便是关闭网页重新进来，也会是倒序的。如果反复刷新几次，数组将会反复倒序。看起来是 Webview 将这个数组缓存了。
