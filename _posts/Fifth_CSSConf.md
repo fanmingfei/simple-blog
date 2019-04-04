@@ -5,9 +5,6 @@ date: 2019-04-04 19:00:00
 category: Other
 ---
 
-# 《第五届中国 CSSCONF 开发者大会》 参会总结
-
-
 <a name="df368884"></a>
 ## 前言
 对于我来讲，虽然做前端那么多年，但对 CSS 的探索非常少，很多 CSS 知识还是在毕业之前积累下来。揣着一本《精通CSS:高级Web标准解决方案(第二版)》（现在出第三版了，这是我在 CSS 道路上的启蒙书）在前端路上走了这么几年。这次怀着对 CSS 的伪热爱，狠了狠心买了一张 CSSConf 的票上了车。<br /><br /><br />我个人经常会参加一些前端的会议，参加大会主要是能看看业界都在用什么方案，处理一些什么问题，虽然这些在会后都会有分享，但是实际体感还是不一样的，其实这也不是最主要原因，更重要的是能在会议上认识一些朋友，相互交流，听一些解决方案和他们遇到的问题，或许以后就是同事了。
@@ -216,8 +213,7 @@ CSS 有着天然生成树的特性。
 网页里面有个打印的功能，可以针对打印状态下的页面进行样式设置，里面拓展了一些和打印相关的属性。<br />![image.png](https://cdn.nlark.com/yuque/0/2019/png/107226/1554281701131-48582d79-3754-428b-9eb1-5e11c6f5fbb2.png#align=left&display=inline&height=779&name=image.png&originHeight=1558&originWidth=2328&size=250033&status=done&width=1164)
 
 更多内容可以参考 [https://www.pagedmedia.org/](https://www.pagedmedia.org/)
-<a name="d41d8cd9-1"></a>
-### 
+
 <a name="scroll"></a>
 ### scroll
 勾股也讲了一些滚动条相关的内容。
