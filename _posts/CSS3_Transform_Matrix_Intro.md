@@ -182,7 +182,7 @@ b=tan30°
 
 c=tan20°
 
-注意 y 对应的是 c，x 对应的是 b。
+注意 x 对应的是 c，y 对应的是 b。
 
 transform: matrix(<del>a,</del> tan(30deg), tan(20deg), <del>d, e, f</del>)
 
