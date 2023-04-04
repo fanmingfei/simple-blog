@@ -2,7 +2,7 @@
 layout: post
 title: "来自智能垃圾桶的诱惑，嵌入式开发初探"
 date: 2023-03-27 21:41:00
-category: 嵌入式&硬件
+category: 嵌入式&硬件&IOT
 ---
 ## 背景原因
 ![](https://src.fanmingfei.com/images/cb91970ca322769d7073b63379658635.jpg)
