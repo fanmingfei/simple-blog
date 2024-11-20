@@ -12,7 +12,7 @@ category: JavaScript
 
 [https://github.com/bda-research/node-crawler](https://github.com/bda-research/node-crawler) 可以获取所有的链接
 
-[https://github.com/apify/crawlee](https://github.com/apify/crawlee) 可以读取链接然后进行处理拿到数据
+[https://github.com/apify/crawlee](https://github.com/apify/crawlee) 可以读取链接然后进行处理从而拿到数据
 
 
 
